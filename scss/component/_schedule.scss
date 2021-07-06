@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap');
+
+@font-face {
+  font-family: Monad;
+  src: url(Monad.otf);
+}
+
+$color-primary: #E5193B;
+$color-grey: #232732;
+$color-white: #E5E5E5;
+$default-font-family:'Poppins',
+sans-serif;
+$default-font-family-detail: 'Gilroy-Regular',
+sans-serif;
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .schedule_body {
+    background: $color-white;
+  }
+
+  .schedule_head {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding-top: 6px;
+    font-family: $default-font-family;
+    color: $color-primary;
+  }
+
+  .schedule_all {
+    padding: 0px 10px;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+
+  .schedule_txt {
+    padding: 0px 20px;
+  }
+
+  .schedule_txt__head {
+    font-size: 18px;
+    color: $color-primary;
+    font-family: $default-font-family-detail;
+  }
+
+  #schedule_txt__paragraph,
+  #schedule_txt__short,
+  #schedule_txt__demo,
+  #schedule_txt__on {
+    font-size: 14px;
+    margin-top: 6px;
+    font-family: $default-font-family-detail;
+    width: 80%;
+    margin-bottom: 30px;
+  }
+
+  .line,
+  .tline {
+    width: 2px;
+    height: 30px;
+    background: $color-primary;
+    margin-left: 6px;
+  }
+
+  .box,
+  .tbox {
+    width: 14px;
+    height: 14px;
+    background: $color-primary;
+    margin-top: 3px;
+  }
+
+  .schedule_shape {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: -40px 0px 20px 0px;
+    padding: 0px 0px;
+  }
+
+  .schedule_mobile {
+    display: block;
+  }
+
+  .schedule_desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 769px) {
+  html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .schedule_mobile {
+    display: none;
+  }
+
+  .schedule_all {
+    margin: 0 5rem;
+  }
+
+  .schedule_desktop {
+    display: block;
+    background: $color-grey;
+    margin-top: 15%;
+  }
+
+  .schedule_head {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 36px;
+    padding-top: 6px;
+    font-family: $default-font-family;
+    color: $color-primary;
+  }
+
+  .schedule_title {
+    display: inline-block;
+    color: #E5193B;
+    font-family: $default-font-family-detail;
+    font-size: 2vw;
+  }
+
+  .schedule_txt {
+    color: whitesmoke;
+    font-size: 1.5vw;
+  }
+
+  .p1 {
+    width: 60.5%;
+    margin: 8% 0;
+  }
+
+  .right {
+    float: right;
+    clear: right;
+  }
+
+  .left {
+    float: left;
+    clear: left;
+  }
+
+  .rgt>.line {
+    border: 1px solid $color-primary;
+    width: 50px;
+    height: 0.5px;
+    margin-top: 10%;
+    vertical-align: middle;
+    margin-right: 20%;
+  }
+
+  .lft>.line {
+    border: 1px solid $color-primary;
+    width: 50px;
+    margin-top: 10%;
+    height: 0.5px;
+    vertical-align: middle;
+    margin-left: 20%;
+  }
+
+  .box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: $color-primary;
+  }
+
+  .rgt {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: space-between;
+  }
+
+  .lft {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: space-between;
+  }
+
+  .right .cnt {
+    margin-left: 5%;
+    display: inline-block;
+    width: 70%;
+    margin-top: -1.5%;
+  }
+
+  .left .cnt {
+    margin-right: 5%;
+    margin-top: -1.5%;
+    display: inline-block;
+    width: 70%;
+  }
+
+  .long {
+    width: 2px;
+    height: 90vw;
+    margin-left: 0%;
+
+    background: $color-primary;
+  }
+}

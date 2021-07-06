@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+html {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html, body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+* {
+    box-sizing: border-box;
+}
+.sub_body{
+	background: #ffffff;
+}
+@media screen and (max-width: 768px) {
+	.submission_section{
+		padding: 5%;
+	}
+	.sub_head{
+		display: flex;
+		border: none;
+		justify-content: space-between;
+		padding: 0% 3%;
+		background: #EAEDFE;
+		border-radius: 5px;
+	}
+	.sub_head__submitOne, .sub_head__submitTwo{
+		font-size: 14px;
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+	}
+	.sub_head__submitOne{
+		color: rgba(16, 113, 243, 0.4);
+		padding: 10px 0px;
+	}
+	.sub_head__submitTwo{
+		background: #ffffff;
+		color: #1071f3;
+		padding: 10px 5px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+	}
+	.sub_create{
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: rgba(0, 0, 0, 0.6);
+	}
+	.sub_team__name, .sub_team__code{
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+	}
+	#name{
+		border: 2px solid #1071F3;
+		padding: 6px;
+		width: 66%;
+		outline: none;
+	}
+	.sub_team__createTeam{
+		border: none;
+		border-radius: 5px;
+		background: #1071F3;
+		padding: 7px;
+		margin-left: 4%;
+		color: #ffffff;
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		outline: none;
+		width: 30%;
+	}
+	.sub_team__createTeam:active{
+		color: #1071f3;
+		background: #ffffff;
+	}
+	.sub_team__or{
+		margin-top: 30px;
+		display:flex;
+		color: rgba(0, 0, 0, 0.4);
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+	}
+	.sub_team__line span:before, .sub_team__line span:after {
+		color: rgba(0, 0, 0, 0.4);
+		content:'';
+		flex: 0.5;
+		border-bottom:solid 1px;
+		margin: 9px 1px;
+	}
+	.sub_team__code{
+		color: rgba(0, 0, 0, 0.4);
+	}
+	#code{
+		padding: 8px;
+		background: #f4f4f4;
+		border: none;
+		width: 66%;
+		outline: none;
+	}
+	 ::placeholder{
+		color: rgba(0, 0, 0, 0.4);
+	}
+	.sub_team__joinTeam{
+		border: none;
+		border-radius: 5px;
+		background: rgba(16, 113, 243, 0.4);
+		padding: 7px;
+		margin-left: 4%;
+		color: #f4f4f4;
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 14px;
+		outline: none;
+		width: 30%;
+		margin-bottom: 10%;
+	}
+	.sub_team__joinTeam:active{
+		color: rgba(16, 113, 243, 0.4);
+		background: #f4f4f4;
+	}
+	.sub_team{
+		border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+		margin-bottom: 15%;
+	}
+	.sub_section__time p{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+	}
+	#sub_section__timeLeft{
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: 900;
+		font-size: 30px;
+		margin-bottom: 5%;
+	}
+	.sub_section__add{
+		background: #f7f7f8;
+		display: flex;
+		justify-content: space-between;
+	}
+	.sub_section__addImage{
+		width: 170px;
+		height: 189px;
+		cursor: pointer;
+		margin: 2%;
+		margin-top: 4%;
+	}
+	.sub_section__addImage{
+		background-image: radial-gradient(rgb(228, 220, 220), white);
+	}
+	.sub_section__add p{
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+	}
+	.sub_section__addImage p{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		margin-top: -3%;
+		text-align: center;
+	}
+	.sub_submit{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 8px;
+		width: 100%;
+		border: none;
+		background: #1071f3;
+		color: #ffffff;
+		margin-top: 5%;
+		outline: none;
+	}
+	.sub_submit:active{
+		color: #1071f3;
+		background: #ffffff;
+	}
+}
+
+@media screen and (min-width: 769px) {
+	.submission_section{
+		padding: 2%;
+		width: 45%;
+		height: 600px;
+		background: #ffffff;
+		margin-left: 1%;
+		margin-top: 2%;
+		margin-bottom: 150px;
+	}
+	.sub_head{
+		display: flex;
+		border: none;
+		justify-content: space-between;
+		padding: 0% 7%;
+		background: #EAEDFE;
+		border-radius: 5px;
+		margin-bottom: 15%;
+	}
+	.sub_head__submitOne, .sub_head__submitTwo{
+		font-size: 14px;
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+	}
+	.sub_head__submitTwo{
+		color: #1071f3;
+		padding: 10px 0px;
+	}
+	.sub_head__submitOne{
+		background: #ffffff;
+		color: #1071f3;
+		padding: 10px 5px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+	}
+	.submission_team{
+		display: none;
+	}
+	.sub_section__time p{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+	}
+	#sub_section__timeLeft{
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: 900;
+		font-size: 30px;
+		margin-bottom: 5%;
+	}
+	.sub_section__add{
+		background: #f7f7f8;
+		display: flex;
+		justify-content: space-between;
+		height: 350px;
+		padding: 5%;
+	}
+	.sub_section__addImage{
+		width: 170px;
+		height: 189px;
+		cursor: pointer;
+		margin: 2%;
+		margin-top: 4%;
+	}
+	.sub_section__addImage{
+		background-image: radial-gradient(rgb(228, 220, 220), white);
+	}
+	.sub_section__add p{
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+	}
+	.sub_section__addImage p{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		margin-top: -3%;
+		text-align: center;
+	}
+	.sub_submit{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 8px;
+		width: 100%;
+		border: none;
+		background: #1071f3;
+		color: #ffffff;
+		margin-top: 15%;
+		outline: none;
+	}
+	.sub_submit:active{
+		color: #1071f3;
+		background: #ffffff;
+	}
+}

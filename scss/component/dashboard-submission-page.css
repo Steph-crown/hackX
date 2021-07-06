@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html, body {
+    width: 100%;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #E5E5E5;
+}
+.dashboard-submission-page {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-submission-page header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.78vw;
+    margin: 1% 6%;
+    color: black;
+}
+.dashboard-submission-page .shareDiv {
+    text-align: center;
+    width: 50%;
+    margin: 2% 25%;
+    font-family: 'Nuito Sans', sans-serif;
+}
+.dashboard-submission-page .shareDiv .shareTxtHd {
+    font-size: 2.7vw;
+    font-weight: 1000;
+    color: black;
+}
+.dashboard-submission-page .shareDiv .shareTxtcnt {
+    font-size: 1.45vw;
+    font-weight: 100;
+    margin-top: 4.5%;
+    margin-bottom: 4%;
+    color: rgba(83, 83, 83, 0.76);
+}
+.dashboard-submission-page .shareDiv .shareImg {
+    width: 46%;
+    padding: 8% 4% 14% 4%;
+    background: #FFFFFF;
+    margin: 0 28%;
+    border-radius: 5px;
+}
+.dashboard-submission-page .shareDiv .shareImg .subSubmit {
+    width: 80%;
+    cursor: pointer;
+}
+.dashboard-submission-page .shareDiv .shareImg .subSubmit:hover {
+    background-image: radial-gradient(rgb(228, 220, 220), white);
+}
+.dashboard-submission-page .inspiration {
+    width: 88%;
+    margin: 0 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dashboard-submission-page .inspiration .subBulb {
+    width: 21.8%;
+    height: auto;
+}
+.dashboard-submission-page .inspiration .insp0 {
+    text-align: left;
+    width: 37%;
+    height: auto;
+    margin: 7.5% 0 2% 0;
+    font-family: 'Nuito Sans', sans-serif;
+}
+.dashboard-submission-page .inspiration .insp0 .inspoHd {
+    font-size: 2.7vw;
+    font-weight: 1000;
+    color: black;
+}
+.dashboard-submission-page .inspiration .insp0 .inspoTxt {
+    font-size: 1.45vw;
+    font-weight: lighter;
+    margin-top: 6.5%;
+    margin-bottom: 6%;
+    color: rgba(126, 126, 126, 0.938);
+}
+.dashboard-submission-page .inspiration .insp0 .inspoBtn {
+    background: rgb(16,113,243);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3% 10%;
+    font-size: 1.4vw;
+    font-weight: lighter;
+    margin-bottom: 4%;
+    cursor: pointer;
+    transition: 1s;
+    outline: none;
+    border: none;
+}
+.dashboard-submission-page .inspiration .insp0 .inspoBtn:hover {
+    background: rgb(51, 139, 253);
+    outline: none;
+    border: none;
+}
+.dashboard-submission-page .inspiration .subBook {
+    width: 33%;
+    height: auto;
+}

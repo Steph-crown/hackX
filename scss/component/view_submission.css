@@ -1,0 +1,684 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.box_blue, .box_green, .box_purple {
+  padding: 7px;
+  border-radius: 5px;
+  width: 80px;
+  text-align: center;
+}
+
+html, .view_submission_body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.view_submission__all {
+  background: #e5e5e5;
+  padding: 3%;
+}
+
+.view_back {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: #00b0fb;
+  margin-top: 5%;
+  width: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.view_back a {
+  color: #00b0fb;
+}
+
+.view_back a:hover, .view_back a:active {
+  color: #ffffff;
+}
+
+.view_teamDetails, .view_projectDetails {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.teamDetails_box {
+  width: 100%;
+  height: 45px;
+  background: #ffffff;
+}
+
+.projectDetails_box {
+  width: 100%;
+  height: 110px;
+  background: #ffffff;
+  padding: 1% 0 0 4%;
+  margin-bottom: 3%;
+}
+
+.projectDetails_bigOne, .projectDetails_big {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+.projectDetails_smallOne, .projectDetails_smallTwo,
+.projectDetails_smallThree, .projectDetails_smallFour .projectDetails_small__flex {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.projectDetails_small__flex {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ffffff;
+}
+
+.projectDetails_small a:hover, .projectDetails_small a:active {
+  color: #00b0fb;
+}
+
+.box_blue {
+  background: rgba(0, 128, 251, 0.1);
+  color: #00b0fb;
+}
+
+.box_green {
+  background: rgba(0, 209, 151, 0.1);
+  color: #00D197;
+}
+
+.box_purple {
+  background: rgba(110, 24, 219, 0.1);
+  color: #6e18db;
+}
+
+.projectDetails_box__submission {
+  width: 100%;
+  height: 300px;
+  background: #ffffff;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.projectDetails_box__submissionImageOne {
+  width: 90%;
+  height: 250px;
+  margin-top: 25px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.projectDetails_box__submissionPlayBtn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.projectDetails_box__submissionPlayBtn:hover {
+  background: #1071f3;
+  border-radius: 50%;
+}
+
+.project_video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 250px;
+  display: none;
+}
+
+.projectDetails_box__submissionTwo {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  margin-bottom: 10px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectDetails_box__submissionTwo img {
+  height: 250px;
+  width: auto;
+  margin: 2%;
+}
+
+.gradeSubmission {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  background: #1071f3;
+  outline: none;
+  padding: 4px;
+  width: 50%;
+  margin-left: 25%;
+  border: none;
+}
+
+.gradeSubmission:hover, .submit_gradeform:hover {
+  color: #1071f3;
+  background: #ffffff;
+}
+
+.gradeform {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #ffffff;
+  padding: 20px 15px 15px 10px;
+  border-radius: 10px;
+  border: 1px solid #ecf6ff;
+  width: 400px;
+  display: none;
+}
+
+label[for='grade'] {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+input[type='text'] {
+  border-radius: 5px;
+  border: 1.5px solid #ecf6ff;
+  padding: 7px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+textarea[name='comment']:focus {
+  outline-color: #00b0fb;
+}
+
+::-webkit-input-placeholder {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #bdbdbb;
+}
+
+:-ms-input-placeholder {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #bdbdbb;
+}
+
+::-ms-input-placeholder {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #bdbdbb;
+}
+
+::placeholder {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #bdbdbb;
+}
+
+label[for='comment'] {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+
+textarea[name='comment'] {
+  border: 1px solid #ecf6ff;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.submit_gradeform {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background: #1071f3;
+  outline: none;
+  padding: 7px;
+  width: 35%;
+  margin-left: 32.5%;
+  border: none;
+  border-radius: 5px;
+}
+
+@media (min-width: 970px) {
+  .box_blue, .box_green, .box_purple {
+    padding: 7px;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+  }
+  .view_submission__all {
+    padding: 3%;
+  }
+  .view_back {
+    color: #00b0fb;
+    margin-top: 5%;
+    width: 210px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .view_back a {
+    color: #00b0fb;
+  }
+  .view_back a:hover, .view_back a:active {
+    color: #ffffff;
+  }
+  .view_teamDetails, .view_projectDetails {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  .teamDetails_box {
+    width: 100%;
+    height: 45px;
+    background: #ffffff;
+  }
+  .projectDetails_box {
+    width: 100%;
+    height: 110px;
+    background: #ffffff;
+    padding: 1% 0 0 4%;
+    margin-bottom: 3%;
+  }
+  .projectDetails_big, .projectDetails_bigOne {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .projectDetails_smallOne, .projectDetails_smallTwo,
+  .projectDetails_smallThree, .projectDetails_smallFour .projectDetails_small__flex {
+    color: rgba(0, 0, 0, 0.4);
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .projectDetails_small__flex {
+    width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #ffffff;
+  }
+  .box_blue {
+    background: #00b0fb;
+  }
+  .box_green {
+    background: #00D197;
+  }
+  .box_purple {
+    background: #6e18db;
+  }
+  .projectDetails_box__submission {
+    width: 100%;
+    height: 300px;
+    background: #ffffff;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .projectDetails_box__submissionImageOne {
+    margin-top: 25px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    width: 60%;
+    height: 250px;
+  }
+  .project_video {
+    width: 60%;
+    display: none;
+  }
+  .projectDetails_box__submissionPlayBtn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .projectDetails_box__submissionPlayBtn:hover {
+    background: #1071f3;
+    border-radius: 50%;
+  }
+  .projectDetails_box__submissionTwo {
+    width: 100%;
+    height: 350px;
+    background: #ffffff;
+    margin-bottom: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+    padding: 15px 15px;
+    height: 230px;
+  }
+  .gradeSubmission {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    color: #ffffff;
+    background: #1071f3;
+    outline: none;
+    padding: 4px;
+    width: 30%;
+    margin-left: 35%;
+    border: none;
+  }
+  .gradeSubmission:hover, .submit_gradeform:hover {
+    color: #1071f3;
+    background: #ffffff;
+  }
+  .gradeform {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px 15px 15px 10px;
+    border-radius: 10px;
+    border: 1px solid #ecf6ff;
+  }
+  label[for='grade'] {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+  }
+  input[type='text'] {
+    border-radius: 5px;
+    border: 1.5px solid #ecf6ff;
+    padding: 7px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  ::-webkit-input-placeholder {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #bdbdbb;
+  }
+  :-ms-input-placeholder {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #bdbdbb;
+  }
+  ::-ms-input-placeholder {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #bdbdbb;
+  }
+  ::placeholder {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: #bdbdbb;
+  }
+  label[for='comment'] {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  textarea[name='comment'] {
+    border: 1px solid #ecf6ff;
+    margin-bottom: 10px;
+  }
+  .submit_gradeform {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    background: #1071f3;
+    outline: none;
+    padding: 7px;
+    width: 35%;
+    margin-left: 32.5%;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 380px) {
+  .view_back {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    width: 160px;
+  }
+  .projectDetails_big, .projectDetails_bigOne {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  .projectDetails_smallOne, .projectDetails_smallTwo, .projectDetails_smallThree,
+  .projectDetails_smallFour, .projectDetails_small__flex {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+  }
+  .box_blue, .box_green, .box_purple {
+    width: 70px;
+  }
+  .projectDetails_small__flex {
+    width: 250px;
+  }
+  .projectDetails_box__submissionImageOne {
+    width: 80%;
+    height: 250px;
+  }
+  .project_video {
+    width: 80%;
+    display: none;
+  }
+  .gradeSubmission {
+    font-size: 14px;
+    width: 60%;
+    margin-left: 20%;
+  }
+  .gradeform {
+    width: 80%;
+  }
+}
+
+@media (min-width: 381px) and (max-width: 580px) {
+  .view_back {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    width: 190px;
+  }
+  .projectDetails_big, .projectDetails_bigOne {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  .projectDetails_smallOne, .projectDetails_smallTwo, .projectDetails_smallThree,
+  .projectDetails_smallFour, .projectDetails_small__flex {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .box_blue, .box_green, .box_purple {
+    width: 70px;
+  }
+  .projectDetails_small__flex {
+    width: 250px;
+  }
+  .projectDetails_box__submissionImageOne {
+    width: 70%;
+    height: 250px;
+  }
+  .project_video {
+    width: 70%;
+    display: none;
+  }
+  .gradeSubmission {
+    font-size: 16px;
+    width: 60%;
+    margin-left: 20%;
+  }
+  .gradeform {
+    width: 60%;
+  }
+}
+
+@media (min-width: 581px) and (max-width: 768px) {
+  .view_back {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    width: 190px;
+  }
+  .projectDetails_big, .projectDetails_bigOne {
+    font-family: "Nunito Sans";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  .projectDetails_smallOne, .projectDetails_smallTwo, .projectDetails_smallThree,
+  .projectDetails_smallFour, .projectDetails_small__flex {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+  }
+  .box_blue, .box_green, .box_purple {
+    width: 70px;
+  }
+  .projectDetails_small__flex {
+    width: 250px;
+  }
+  .projectDetails_box__submissionImageOne {
+    width: 60%;
+    height: 250px;
+  }
+  .project_video {
+    width: 60%;
+    display: none;
+  }
+  .gradeSubmission {
+    font-size: 16px;
+    width: 60%;
+    margin-left: 20%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 969px) {
+  .view_back {
+    width: 210px;
+  }
+  .projectDetails_box__submissionImageOne {
+    width: 60%;
+    height: 250px;
+  }
+  .project_video {
+    width: 60%;
+    display: none;
+  }
+}
+/*# sourceMappingURL=view_submission.css.map */
+.projectDetails_box__submissionTwo {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  margin-bottom: 10px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projectDetails_box__submissionTwo img {
+  width: 260px;
+  height: auto;
+}

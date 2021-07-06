@@ -1,0 +1,145 @@
+.submission-container {
+    width: 90%;
+    margin: auto;
+}
+
+.submission-btn-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.submission {
+    padding: 40px 0;
+}
+
+a.go-btn-link button,
+a.delete-btn-link button,
+button.accept-btn,
+button.reject-btn{
+    padding: 10px 30px;
+    font-family: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #ffffff;
+    transition: all .7s ease;
+    font-size: 12px;
+}
+
+a.go-btn-link button {
+    background-color: #1071F3;
+}
+
+a.go-btn-link button:hover {
+    background-color: #3d8cf3;
+}
+
+a.delete-btn-link button {
+    background-color: #E5193B;
+}
+
+a.delete-btn-link button:hover {
+    background-color: #f04d68;
+}
+
+.submission-whiteboard {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.submission-details {
+    width: 90%;
+    margin: auto;
+}
+
+p.application-no {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+}
+
+p.user-fullname{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.user-details-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.submission-img-container{
+    width: 50px;
+    height: 50px;
+    margin-top: 8px;
+    margin-right: 15px; 
+    border-radius: 50%;
+    background-color: #c4c4c4;
+}
+
+p.details-text{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    line-height: 3;
+}
+
+.my-details{
+    margin-top: 30px;
+}
+
+.avatar-submission-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+p.date-submitted,
+p.mobile-date-submitted{
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+p.mobile-date-submitted{
+    display: none;
+}
+
+button.reject-btn{
+    background: #C4C4C4;
+    margin-right: 20px;
+}
+
+button.accept-btn{
+    background: rgba(16, 113, 243, 0.8);
+}
+
+button.reject-btn:hover{
+    background: #858383;
+}
+
+button.accept-btn:hover{
+    background: rgba(16, 113, 243, 1);
+}
+
+.submission-buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px){
+    p.mobile-date-submitted{
+        display: block;
+    }
+
+    p.date-submitted {
+        display: none;
+    }
+
+    .submission-details-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -1,3 +1,3 @@
 # hackX
 
-Run npm install
+hackX 2020.

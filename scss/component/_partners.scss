@@ -1,0 +1,234 @@
+.bod {
+    width: 94%;
+    height: auto;
+    margin: 3%;
+    padding: 5% 0;
+}
+
+@media only screen and (max-width: 767px) {
+    #largeScreen {
+        display: none;
+    }
+
+    #smallScreen {
+        margin: auto;
+        display: block;
+        /*position : relative;*/
+        width: 100%;
+    }
+
+    .partner_topic2 {
+        margin-top: 5%;
+        color: #E5193B;
+        text-align: center;
+        font-size: 28.5px;
+    }
+
+    .mySlides {
+        background-color: transparent;
+        position: relative;
+        font-family: Poppins;
+    }
+
+    .img_contain {
+        width: 100%;
+        height: 30vh;
+        background-color: transparent;
+        position: relative;
+    }
+
+    .img_contain img {
+        width: 70%;
+        display: inline-block;
+        height: 13vh;
+    }
+
+    #imgSlide {
+        margin: 10vh 15% auto 15%;
+    }
+
+    .carousal-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+        justify-content: space-between;
+        vertical-align: middle;
+    }
+
+    .circles {
+        text-align: center;
+    }
+
+    .prev,
+    .next {
+        cursor: pointer;
+        width: auto;
+        height: 60px;
+        padding: 16px;
+        color: #fff;
+        font-size: 30px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        outline: none;
+    }
+
+    .prev img,
+    .next img {
+        margin-top: 69%;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        transition: 1s ease;
+    }
+
+    .prev img {
+        margin-top: 70%;
+        transform: rotate(180deg);
+    }
+
+    .prev img:hover,
+    .next img:hover {
+        opacity: 0.5;
+        color: rgb(255, 255, 255);
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 10px;
+        margin: 0px 2px;
+        top: -2rem;
+        border: 1px solid #E5193B;
+        background-color: #F9F9F9;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    #active,
+    .dot:hover {
+        background-color: #E5193B;
+        outline: none;
+    }
+
+    .text {
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+}
+
+@media only screen and (min-width:768px) {
+    #largeScreen {
+        display: block;
+        width: 85%;
+        margin: auto;
+    }
+
+    #smallScreen {
+        display: none;
+    }
+
+    .partner_topic1 {
+        width: 100%;
+        margin: 5% auto 2% auto;
+        text-align: center;
+        color: #E5193B;
+        font-size: 50px;
+    }
+
+    .myimg1 {
+        display: flex;
+        flex-wrap: wrap;
+        width: 85%;
+        margin: auto;
+        justify-content: space-between;
+    }
+
+    .img001 {
+        width: 28%;
+        height: 80px;
+        background-image: url(../../assets/images/partner-one.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 80%;
+        margin: 1pc auto;
+    }
+
+    .img002 {
+        width: 28%;
+        height: 100px;
+        background-image: url(../../assets/images/partner-three.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        margin: 1pc auto;
+    }
+
+    .img003 {
+        width: 28%;
+        height: 100px;
+        background-image: url(../../assets/images/partner-two.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        margin: 1pc auto;
+    }
+
+    .img004 {
+        width: 28%;
+        height: 100px;
+        background-image: url(../../assets/images/partner-four.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+        margin: 1pc auto;
+    }
+
+    .img005 {
+        width: 28%;
+        height: 100px;
+        background-image: url(../../assets/images/partner-three.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        margin: 1pc auto;
+    }
+
+    .img006 {
+        width: 28%;
+        height: 100px;
+        background-image: url(../../assets/images/partner-two.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        margin: 1pc auto;
+    }
+}

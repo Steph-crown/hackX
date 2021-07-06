@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+
+
+
+$color-blue: #1071F3;
+$color-white: #ffffff;
+$fontMn: "Montserrat", sans-serif;
+
+html, body{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+@media screen and (min-width: 769px) {
+	.header_head{
+		display: flex;
+		margin-top: 15%;
+		margin-left: 10%;
+		justify-content: space-around;
+		width: 60%;
+	}
+	.header_head a{
+		text-decoration: none;
+		color: black;
+	}
+	.header_one{
+		margin-left: -10%;
+		background: $color-white;
+		margin-top: -17px;
+		border: 1px solid $color-white;
+		border-radius: 5px;
+	}
+	.header_one__app{
+		font-family: $fontMn;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 14px;
+		padding: 0px 20px;
+		padding-top: 18px;
+	}
+	.header_one__app a{
+		padding-bottom: 29.5px;
+		color: $color-blue;
+		border-bottom: 4px solid #00BBFB;
+	}
+	.header_two{
+		display: flex;
+		border: 1px solid $color-white;
+		border-radius: 5px;
+		margin-top: -17px;
+		margin-left: -7%;
+		height: 81px;
+		line-height: 46px;
+		background: $color-white;
+	}
+	.header_two__time{
+		font-family: $fontMn;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 14px;
+	}
+	.header_two__prize{
+		font-family: $fontMn;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 14px;
+	}
+	.header_two__over{
+		font-family: $fontMn;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 14px;
+	}
+	.header_two__time a{
+		padding: 50px;
+		color: rgba(0, 0, 0, 0.4);
+	}
+	.header_two__prize a{
+		padding-right: 50px;
+		color: rgba(0, 0, 0, 0.4);
+	}
+	.header_two__over a{
+		padding-right: 30px;
+		color: rgba(0, 0, 0, 0.4);
+	}
+}

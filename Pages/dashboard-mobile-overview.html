@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="stylesheet" href="../scss/component/Dashboard2-section.css" type="text/css">
+    <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+</head>
+<body>
+    <nav>
+        <div class="head_section1">
+            <div class="head_info0">
+                <a href="#">
+                    <div class="head_pic0">
+                        <a href="../index.html" ><img src="../assets/ECX.svg"/></a>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-flex">
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <button class="drop-btn">
+                                <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                                Dashboard
+                            </button>
+                            <div class="dropDown-content">
+                                <a class="filter" href="main_dashboard_page.html#timelineBtn">Timeline</a>
+                                <a class="filter" href="main_dashboard_page.html#announBtn">Announcements</a>
+                                <a class="filter" href="main_dashboard_page.html#overviewBtn">Overview</a>
+                            </div> 
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="dashboard-submissions.html">
+                                <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
+                                Submission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="i100">
+                        <div class="head_section2">
+                            <div class="head_logout">
+                                <p class="name">KEAZZY</p>
+                                <a href="profile-page.html" class="view">VIEW PROFILE</a>
+                            </div>
+                            <div class="head_pic1">
+                                <div class="head_pic2"><img src="../assets/images/sample.jpg" class="head_pic02"/></div>
+                            </div>
+                            <div class="dropdown_button">
+                                <img src="../assets/images/dashboard/dropdown-logo.svg" id="dropdownLogo">
+                                <div class="dropdownProfile" id="dropdownProfile">
+                                    <div class="username">Signed in as Keazzy </div>
+                                    <hr class="ddHr">
+                                    <div class="accountState">Participant</div>
+                                    <hr class="ddHr">
+                                    <div class="navigationLink">
+                                        <a>Your Profile</a>
+                                        <a href="dashboard-submissions.html">Your submissions</a>
+                                        <a href="teams.html">Your Teams</a>
+                                    </div>
+                                    <hr class="ddHr">
+                                    <div class="otherNavs">
+                                        <a>Help</a>
+                                        <!-- <a>Settings</a> -->
+                                        <a>Logout</a>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="linedivide"></div>
+                    </div>
+                </div>
+                <div class="logout-wrapper">
+                    <a href="#" class="logout-btn"><button>LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <div class="Dashboard2-section mobileView">
+        <header class="mobileDashLink">
+            <a class="dashLinks" href="main_dashboard_page.html">Dashboard</a> > <b>Overview</b>
+        </header>
+        <div class="sectionbar">
+            <section class="overview">
+                <div class="blueHead">OVERVIEW</div>
+                <hr class="mobViewHr">
+                <div class="image">
+                    <div class="hackX"><span style="font-family: 'Poppins', sans-serif;">hack</span><span class="X">X</span></div>
+                    <div class="hackathon">HACKATHON</div>
+                </div>
+                <div class="social" title="ecxunilag" onclick="window.location.assign('https://twitter.com/ecxunilag')">
+                    <img src="../assets/images/dashboard/dash-twitter.svg" class="img">
+                    <a href="https://twitter.com/ecxunilag" style="text-decoration: none; color: #000000">Twitter</a>
+                    <img src="../assets/images/dashboard/overview-blue.svg" class="go">
+                </div>
+                <div class="social" title="ECX-Unilag" onclick = "window.location.assign('https://github.com/ECX-Unilag')">
+                    <img src="../assets/images/dashboard/dash-github.svg" class="img">
+                    Github
+                    <img src="../assets/images/dashboard/overview-gold.svg" class="go">
+                </div> 
+            </section>
+        </div>
+    </div>
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/get_user.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+</html>

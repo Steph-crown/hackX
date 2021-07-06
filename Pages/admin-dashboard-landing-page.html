@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADMIN Dashboard</title>
+    <link href="../scss/component/admin-dashboard.css" rel="stylesheet">
+    <link href="../scss/page/popup.css" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/component/admin-dashboard-navbar.css">
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <nav> 
+        <div class="head_section1">
+            <div class="head_info0">
+                <a href="#" onclick="window.location.replace('../index.html')">
+                    <div class="head_pic0">
+                        <img src="../assets/ECX.png" />
+                    </div>
+                </a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-flex">
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <button class="drop-btn" onclick="window.location.replace('admin-dashboard-landing-page.html')">
+                                <!--<img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">-->
+                                <b>Dashboard</b>
+                            </button>
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="admin-application-submission.html">   
+                                <!--<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">-->
+                                Applications
+                            </a>
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="admin-submission-inbox.html">   
+                                <!--<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">-->
+                                Submissions
+                            </a>
+                        </div>
+                    </div>
+                    <div class="i100">
+                        <div class="head_section2">
+                            <div class="head_logout">
+                                <p class="name">KEAZZY</p>
+                                <a href="#" class="view">VIEW PROFILE</a>
+                            </div>
+                            <div class="head_pic1">
+                                <div class="head_pic2"><img src="" class="head_pic02"/></div>
+                            </div>
+                            <div class="dropdown_button">
+                                <button class="dropdownBtn">
+                                    <img src="../assets/images/dashboard/dropdown-logo.svg">
+                                    <div class="dropdownProfile" id="dropdownProfile">
+                                        <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
+                                        <hr class="ddHr">
+                                        <div class="accountState">ADMIN</div>
+                                        <hr class="ddHr">
+                                        <div class="navigationLink">
+                                            <a href="admin-submission-inbox.html">view submissions</a>
+                                            <a href="teams.html">view Teams</a>
+                                        </div>
+                                        <hr class="ddHr">
+                                        <div class="otherNavs">
+                                            <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
+                                            <a id="logout_user">Logout</a>
+                                        </div>
+                                    </div>                                    
+                                </button>
+                            </div>    
+                        </div>
+                        <div class="linedivide"></div>
+                    </div>
+                </div>
+                <div class="logout-wrapper">
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div> 
+    <header class="hackx-dashboard">ADMIN <b>> Dashboard</b></header>
+
+    <main>
+        <a class="get-applications" href="admin-application-submission.html">
+            View all applications
+        </a>
+    
+        <a class="get-submissions" href="admin-submission-inbox.html">
+            View all Submissions
+        </a>
+    </main>
+    
+    <aside>
+        <div class="main_dashboard__welcome" id="close-cont">
+            <div class="welcome_close">
+                <img src="../assets/images/Rectangle.png" id="close_image" alt="close" style="cursor: pointer">
+            </div>
+            <div class="welcome_info">
+                <img src="../assets/images/welocmeimg.png" alt="welcome">
+                <div class="welcome_info__flex">
+                    <p class="welcome_info__head">Welcome <span class="welcome_username">Anonymous</span>!</p>
+                    <p class="welcome_info__txt">As an Admin, you'll be able to access all submissions and 
+                        applications from this dashboard. Welcome once again.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <script src="../js/poppy.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/get_user.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+</html>

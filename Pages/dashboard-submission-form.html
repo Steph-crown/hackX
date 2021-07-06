@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard submission form</title>
+    <link rel="stylesheet" href="../scss/component/dashboard-submission-form.css">
+    <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .required {
+            margin: 0 8px;
+            color: rgb(212, 26, 26);
+            font-family: "Poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="head_section1">
+            <div class="head_info0">
+                <a href="#">
+                    <div class="head_pic0">
+                        <img src="../assets/ECX.svg"/>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-flex">
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <button class="drop-btn">
+                                <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                                Dashboard
+                            </button>
+                            <div class="dropDown-content">
+                                <a class="filter" href="main_dashboard_page#timelineBtn">Timeline</a>
+                                <a id="announDropBtn" class="filter" href="main_dashboard_page#announBtn">Announcements</a>
+                                <a class="filter" href="main_dashboard_page#overviewBtn">Overview</a>
+                            </div> 
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="dashboard-submissions.html">
+                                <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
+                                Submission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="i100">
+                        <div class="head_section2">
+                            <div class="head_logout">
+                                <p class="name">KEAZZY</p>
+                                <a href="#" class="view">VIEW PROFILE</a>
+                            </div>
+                            <div class="head_pic1">
+                                <div class="head_pic2"><img src="../assets/images/sample.jpg" class="head_pic02"/></div>
+                            </div>
+                            <div class="dropdown_button">
+                                <button class="dropdownBtn">
+                                    <img src="../assets/images/dashboard/dropdown-logo.svg">
+                                    <div class="dropdownProfile" id="dropdownProfile">
+                                        <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
+                                        <hr class="ddHr">
+                                        <div class="accountState">Participant</div>
+                                        <hr class="ddHr">
+                                        <div class="navigationLink">
+                                            <a href="profile-page.html">Your Profile</a>
+                                            <a href="dashboard-submissions.html">Your submissions</a>
+                                            <a href="teams.html">Your Team</a>
+                                        </div>
+                                        <hr class="ddHr">
+                                        <div class="otherNavs">
+                                            <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
+                                            <!--<a>Settings</a>-->
+                                            <a id="logout_user">Logout</a>
+                                        </div>
+                                    </div>                                    
+                                </button>
+                            </div>    
+                        </div>
+                        <div class="linedivide"></div>
+                    </div>
+                </div>
+                <div class="logout-wrapper">
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div> 
+    <div class="dashboard-submission-form">
+        <div class="heading">
+            <div class="headForm"><a href="dashboard-submission-page.html"><b> &lt; Finish Later </b></a></div>
+            <div class="headMain">
+                <div class="Hd"><span style="font-family: 'Poppins', sans-serif;">hack</span><span class="X">X</span></div>
+                <div class="cnt">Submitting project to HackX</div>
+            </div>
+            <ul class="Ul">
+                <li class="List">Describe your project <br> note that all field with the <span class="required"><b><span class="required">*</span></b></span> symbol is required, while the rest are optional</li>
+            </ul>
+        </div>
+        <form class="subForm" id="formElem" >
+            <div class="mobileHead">
+                <div class="headTitle">SUBMISSIONS</div>
+                <div class="cnt">Your submission will appear</div>
+                <hr class="horLine">
+            </div>
+            <div class="inputCnt">
+                <div class="title">
+                    <span class="vertrule vr1" id="vR1"></span>
+                    <span class="titleName">Name</span>
+                </div>
+                <div class="info">WHAT IS YOUR TEAM CALLING IT ??<span class="required">*</span></div>
+                <!--<span class="inputCount" id="inputCount1">0 / 50</span>-->                
+                <input type="text" onkeyup="countInput1(this.value)" id="projectName" name="name" placeholder="Begin typing...." required>
+            </div>
+            <div class="inputCnt">
+                <div class="title">
+                    <span class="vertrule" id="vR2"></span>
+                    <span class="titleName">Tagline</span>
+                </div>
+                <div class="info">WRITE A SHORT, SHARP AND ON-POINT DESCRIPTION OF THE PROJECT<span class="required">*</span></div>
+                <!--<span class="inputCount"id="inputCount2">0 / 200</span>-->
+                <textarea class="submissionInputTextarea" onkeyup="countInput2(this.value)" id="projectTagline" name="tagline" placeholder="Begin typing...." required></textarea>
+            </div>
+            <div class="inputCnt">
+                <div class="title">
+                    <span class="vertrule" id="vR3"></span>
+                    <span class="titleName">The problem it solves</span>
+                </div>
+                <div class="info">DESCRIBE WHAT PEOPLE CAN USE IT FOR, OR HOW IT MAKES EXISTING EASIER/SAFER E.T.C <span class="required">*</span></div>
+                <!--<span class="inputCount" id="inputCount3">0 / 200</span>-->
+                <textarea class="submissionInputTextarea" onkeyup="countInput3(this.value)" id="projectUSe" name="problem" placeholder="Begin typing...." required></textarea>            
+            </div>
+            <div class="inputCnt">
+                <div class="title">
+                    <span class="vertrule" id="vR4"></span>
+                    <span class="titleName">Challenges your team ran into</span>
+                </div>
+                <div class="info">TELL US ABOUT ANY SPECIFIC BUG OR HUDDLE YOUR TEAM RAN INTO WHILE BUILDING THIS PROJECT, HOW DID YOUR TEAM GET OVER IT?<span class="required">*</span></div>
+                <!--<span class="inputCount" id="inputCount4">0 / 200</span>-->
+                <textarea class="submissionInputTextarea" onkeyup="countInput4(this.value)" id="projectChallenge" name="challenges" placeholder="Begin typing...." required></textarea>
+            </div>
+            <div class="inputCnt">
+                <div class="title">
+                    <span class="vertrule" id="vR5"></span>
+                    <span class="titleName">Technologies your team used</span>
+                </div>
+                <div class="info">WRITE A COMMA SEPARATED LIST OF TECHNOLOGIES YOUR TEAM USED IN BUILDING THE PROJECT <span class="required">*</span></div>
+                <!--<span class="inputCount" id="inputCount5">0 / 200</span>-->
+                <textarea class="submissionInputTextarea" onkeyup="countInput5(this.value)" id="projectTechnology" name="technologies" placeholder="Begin typing...." required></textarea>
+            </div>
+            <div class="inputCnt">
+                <div class="title">
+                    <span class="vertrule" id="vR6"></span>
+                    <span class="titleName">Links</span>
+                </div>
+                <div class="info">ADD A GITHUB, WEBSITE, APP STORE E.T.C OR WHEREVER THE PROJECT CAN BE TESTED LIVE <span class="required">*</span></div>
+                <!--<span class="inputCount" id="inputCount6">0 / 50</span>-->
+                <input type="url" onkeyup="countInput6(this.value)" id="projectLink" name="links" placeholder="Paste or type a link (e.g. https:hackX.github.io) and then press 'Enter'" required>
+            </div>
+            <div class="inputCnt">
+                <div class="title">
+                    <span class="vertrule" id="vR7"></span>
+                    <span class="titleName">Video Demo</span>
+                </div>
+                <div class="info">ADD A LINK TO YOUTUBE, GOOGLE DRIVE E.T.C SHOWING A DEMO OF YOUR SITE AND WHAT IT ENTAILS</div>
+                <!--<span class="inputCount" id="inputCount7">0 / 50</span>-->
+                <input type="url" onkeyup="countInput7(this.value)" id="projectVideoLink" name="vidLinks" placeholder="Paste or type link here">
+            </div>
+            <div class="inputCnt">
+                <div class="title">
+                    <span class="vertrule"id="vR8"></span>
+                    <span class="titleName">Pictures</span>
+                </div>
+                <div class="info">UPLOAD A MAXIMUM OF 5 PICTURES (SIZE: MAX 2MB EACH) SHOWCASING YOUR TEAM'S PROJECT (THE FIRST IMAGE WILL BE USED AS A PREVIEW ON SOCIAL MEDIA)</div>
+                <div class="imgCnt">
+                    <div id="preview-container" class="imageDialogContainer">
+                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload" class="imageUpload">
+                        <input type="file" id="imageFile" class="imageFile" name="picture" accept=".gif, .jpg, .png" multiple />
+                        <img id="imagePreview" class="imagePreview" />
+                        <div id="imageName" class="imageName" title="image name"></div>
+                        <button id="deleteImage" class="deleteImage">Delete</button>
+                    </div>
+                    <div id="preview-container1" class="imageDialogContainer imgDiCont1">
+                        <img src="" id="imageUpload1" class="imageUpload">
+                        <input type="file" id="imageFile1" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <img id="imagePreview1" class="imagePreview" />
+                        <div id="imageName1" class="imageName"></div>
+                        <button id="deleteImage1" class="deleteImage">Delete</button>
+                    </div>
+                
+                    <div id="preview-container2" class="imageDialogContainer imgDiCont2">
+                        <img src="" id="imageUpload2" class="imageUpload">
+                        <input type="file" id="imageFile2" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <img id="imagePreview2" class="imagePreview" />
+                        <div id="imageName2" class="imageName"></div>
+                        <button id="deleteImage2" class="deleteImage">Delete</button>
+                    </div>
+                
+                    <div id="preview-container3" class="imageDialogContainer imgDiCont3">
+                        <img src="" id="imageUpload3" class="imageUpload">
+                        <input type="file" id="imageFile3" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <img id="imagePreview3" class="imagePreview" />
+                        <div id="imageName3" class="imageName"></div>
+                        <button id="deleteImage3" class="deleteImage">Delete</button>
+                    </div>
+                
+                    <div id="preview-container4" class="imageDialogContainer imgDiCont4">
+                        <img src="" id="imageUpload4" class="imageUpload">
+                        <input type="file" id="imageFile4" class="imageFile" name="image" accept="image/jpg,image/png,image/gif" />
+                        <img id="imagePreview4" class="imagePreview" />
+                        <div id="imageName4" class="imageName"></div>
+                        <button id="deleteImage4" class="deleteImage">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="submitBtn">
+            <input type="submit" class="submit" id="previewSubmissionDetails" value="SUBMIT" disabled>
+        </div>
+    </div>
+    <div id="submit_popup">
+		<img src="../assets/images/Rectangle.png" alt="close" id="close_popup">
+		<p class="submit_question">You will not be able to edit this submission. Are you sure you want to submit?</p>
+		<button class="submit_popup__btn">Submit</button>
+	</div>
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/submission-dom-behavior.js"></script>
+    <script src="../js/imageValidation.js"></script>
+    <script src="../js/get_user.js"></script>
+    <script src="../js/dashboard_submission_form.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+</html>

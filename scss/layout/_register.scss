@@ -1,0 +1,718 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap');
+
+@font-face {
+	font-family: Monad;
+	src: url(../fonts/Monad.otf);
+}
+
+
+
+::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-family: Gilroy-Bold, sans-serif;
+}
+
+:-ms-input-placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-family: Gilroy-Bold, sans-serif;
+}
+
+::-ms-input-placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-family: Gilroy-Bold, sans-serif;
+}
+
+
+::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-family: Gilroy-Bold, sans-serif;
+}
+
+i {
+	color: rgba(0, 0, 0, 0.3);
+	margin-top: 13px;
+	margin-left: -25px;
+}
+
+.register-form-container .arrow {
+	vertical-align: center;
+}
+
+[list]::-webkit-calendar-picker-indicator {
+	display: none;
+}
+
+.register-form-container a {
+	text-decoration: none;
+	color: black;
+}
+
+.register-form-container li {
+	list-style: none;
+}
+
+.register-form-container input:valid {
+	color: green;
+}
+
+.register-form-container input:invalid {
+	color: red;
+}
+
+.come {
+	display: none;
+}
+
+@media (max-width: 300px) {
+	body {
+		width: 100%;
+	}
+
+
+
+	main {
+		width: 100%;
+	}
+
+	.register-form-container .image-1 img,
+	.image-2 img {
+		display: none;
+	}
+
+	.register-form-container .right {
+		float: right;
+	}
+
+	.register-form-container .right {
+		display: inline-block;
+		margin: 4%;
+	}
+
+	.register-form-container .menu {
+		float: right;
+		margin: 2%;
+		width: 100%;
+	}
+
+	.register-call-to-action {
+		display: none;
+	}
+
+	.register-form-container {
+		display: block;
+		width: 80%;
+		margin: 8%;
+		height: auto;
+		float: right;
+		clear: right;
+	}
+
+	.register-form-container h2 {
+		padding-left: 5px;
+		margin-bottom: 2rem;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 30px;
+		line-height: 28px;
+		font-weight: 400;
+		color: #000000;
+	}
+
+	.register-form-container .count {
+		margin-left: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		color: #000000;
+	}
+
+	.register-form-container legend {
+		margin-bottom: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		color: #000000;
+	}
+
+	.register-form-container label {
+		margin-top: 7%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		color: #000000;
+	}
+
+	.register-form-container input[type="text"],
+	.register-form-container input[type="email"],
+	.register-form-container input[type="number"],
+	.register-form-container input[type="password"] {
+		/* Rectangle 63 */
+		width: 100%;
+		padding: 10px;
+		border: none;
+		height: 59px;
+		margin-bottom: 9%;
+		font-family: Gilroy-Regular;
+		font-size: 14px;
+		color: #232732;
+		line-height: 16px;
+		background: rgba(196, 196, 196, 0.2);
+		border-radius: 5px;
+		transition: 1s;
+	}
+
+	.register-form-container input:hover {
+		border: 1px solid red;
+	}
+
+	.register-form-container input:focus {
+		outline: none;
+	}
+
+	.register-form-container .previous-btn {
+		width: 100%;
+		height: 50px;
+		float: left;
+		display: block;
+		font-family: Gilroy-Medium;
+		font-size: 8vw;
+		color: #FA0048;
+		background: transparent;
+		border: none;
+		margin-bottom: 10%;
+		border-radius: 4px;
+		transition: 1s;
+	}
+
+
+	.register-form-container button:focus {
+		outline: none;
+	}
+
+	.register-form-container .previous-btn:hover {
+		border: 0.5px solid #FA0048;
+	}
+
+	i {
+		color: rgba(0, 0, 0, 0.3);
+		margin-top: 13px;
+		margin-left: -25px;
+	}
+
+	.register-form-container .signup-btn {
+		width: 100%;
+		height: 50px;
+		float: right;
+		display: block;
+		font-family: Gilroy-Medium;
+		font-size: 8vw;
+		color: white;
+		background: #FA0048;
+		border: none;
+		border-radius: 4px;
+	}
+
+	.register-form-container .txt {
+		margin-top: 4px;
+		vertical-align: center;
+	}
+
+	.register-form-container .age {
+		position: absolute;
+		display: inline block;
+		margin-top: 10%;
+		right: 10%;
+	}
+
+	.register-form-container .arrow1 {
+		float: left;
+		margin: 3% 0 4% 9%;
+	}
+
+	.register-form-container .arrow2 {
+		float: right;
+		margin: 3% 9% 4% 0;
+	}
+
+	.register-form-container .option {
+		// position: absolute;
+		display: inline block;
+		margin: -4rem 2rem;
+		right: 14%;
+	}
+
+	.register-form-container input[type="checkbox"] {
+		background-color: red;
+		width: 22px;
+		height: 22px;
+		border: 2px solid #FFFFFF;
+	}
+}
+
+@media (min-width: 301px) and (max-width: 500px) {
+	.register-call-to-action {
+		display: none;
+	}
+
+	.come {
+		display: none;
+	}
+
+	.register-form-container {
+		display: block;
+		width: 80%;
+		margin: 8%;
+		height: auto;
+		float: right;
+		clear: right;
+	}
+
+	.register-form-container h2 {
+		padding: 0 0 2rem 0;
+		font-family: Gilroy-bold, sans-serif;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 28px;
+		font-weight: 400;
+		color: #000000;
+	}
+
+	.register-form-container .count {
+		margin-left: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		color: #000000;
+	}
+
+	.register-form-container legend {
+		margin-bottom: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		color: #000000;
+	}
+
+	.register-form-container label {
+		margin-top: 7%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		color: #000000;
+	}
+
+	.register-form-container input[type="text"],
+	.register-form-container input[type="email"],
+	.register-form-container input[type="number"],
+	.register-form-container input[type="password"] {
+		/* Rectangle 63 */
+		width: 100%;
+		padding: 10px;
+		border: none;
+		height: 59px;
+		margin-bottom: 9%;
+		font-family: Gilroy-Bold;
+		font-size: 14px;
+		color: #232732;
+		line-height: 16px;
+		background: rgba(196, 196, 196, 0.2);
+		border-radius: 5px;
+		transition: 1s;
+	}
+
+	.register-form-container input:hover {
+		border: 1px solid red;
+	}
+
+	.register-form-container input:focus {
+		outline: none;
+	}
+
+	.register-form-container .previous-btn {
+		width: 46%;
+		height: 50px;
+		float: left;
+		display: block;
+		font-family: Poppins, sans-serif;
+		font-size: 18px;
+		color: #FA0048;
+		background: transparent;
+		border: none;
+		border-radius: 4px;
+		transition: 1s;
+	}
+
+	.register-form-container button:focus {
+		outline: none;
+	}
+
+	.register-form-container .previous-btn:hover {
+		border: 0.5px solid #FA0048;
+	}
+
+	.register-form-container .signup-btn {
+		width: 46%;
+		height: 50px;
+		float: right;
+		display: block;
+		font-family: Poppins, sans-serif;
+		font-size: 18px;
+		color: white;
+		background: #FA0048;
+		border: none;
+		border-radius: 4px;
+	}
+
+	.register-form-container .txt {
+		margin-top: 4px;
+		vertical-align: center;
+	}
+
+	.register-form-container .age {
+		position: absolute;
+		display: inline block;
+		margin-top: 10%;
+		right: 10%;
+	}
+
+	.register-form-container .arrow {
+		margin-top: 8px;
+		margin-left: 11px;
+		margin-right: 11px;
+	}
+
+	.register-form-container .option {
+		position: absolute;
+		display: inline block;
+		margin-top: 6%;
+		right: 14%;
+	}
+
+	.register-form-container input[type="checkbox"] {
+		background-color: red;
+		width: 22px;
+		height: 22px;
+		border: 2px solid #FFFFFF;
+	}
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+	.register-call-to-action {
+		display: none;
+	}
+
+	.register-form-container {
+		display: block;
+		width: 80%;
+		margin: 8%;
+		height: auto;
+		float: right;
+		clear: right;
+	}
+
+	.register-form-container h2 {
+		padding-left: 5px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 24px;
+		font-weight: 600;
+		line-height: 28px;
+		font-weight: 400;
+		color: #000000;
+	}
+
+	.register-form-container .count {
+		margin-left: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		color: #000000;
+	}
+
+	.come {
+		font-size: 25px;
+	}
+
+	.register-form-container legend {
+		margin-bottom: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		color: #000000;
+	}
+
+	.register-form-container label {
+		margin-top: 7%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 18px;
+		font-weight: 500;
+		color: #000000;
+	}
+
+	.register-form-container input[type="text"],
+	.register-form-container input[type="email"],
+	.register-form-container input[type="number"],
+	.register-form-container input[type="password"] {
+		/* Rectangle 63 */
+		width: 100%;
+		padding: 10px;
+		border: none;
+		height: 59px;
+		margin-bottom: 9%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 14px;
+		color: #232732;
+		line-height: 16px;
+		background: rgba(196, 196, 196, 0.2);
+		border-radius: 5px;
+		transition: 1s;
+	}
+
+	.register-form-container input:hover {
+		border: 1px solid red;
+	}
+
+	.register-form-container input:focus {
+		outline: none;
+	}
+
+	.register-form-container .previous-btn {
+		width: 46%;
+		height: 50px;
+		float: left;
+		display: block;
+		font-family: Poppins, sans-serif;
+		font-size: 18px;
+		color: #FA0048;
+		background: transparent;
+		border: none;
+		border-radius: 4px;
+		transition: 1s;
+	}
+
+	.register-form-container button:focus {
+		outline: none;
+	}
+
+	.register-form-container .previous-btn:hover {
+		border: 0.5px solid #FA0048;
+	}
+
+	.register-form-container .signup-btn {
+		width: 46%;
+		height: 50px;
+		float: right;
+		display: block;
+		font-family: Poppins, sans-serif;
+		font-size: 18px;
+		color: white;
+		background: #FA0048;
+		border: none;
+		border-radius: 4px;
+	}
+
+	.register-form-container .txt {
+		margin-top: 4px;
+		vertical-align: center;
+	}
+
+	.register-form-container .age {
+		position: absolute;
+		display: inline block;
+		margin-top: 10%;
+		right: 10%;
+	}
+
+	.register-form-container .arrow {
+		margin-top: 8px;
+		margin-left: 11px;
+		margin-right: 11px;
+	}
+
+	.register-form-container .option {
+		position: absolute;
+		display: inline block;
+		margin-top: 4%;
+		right: 10%;
+	}
+
+	.register-form-container input[type="checkbox"] {
+		background-color: red;
+		width: 22px;
+		height: 22px;
+		border: 2px solid #FFFFFF;
+	}
+}
+
+@media (min-width: 769px) {
+	.register-call-to-action {
+		width: 30%;
+		padding-top: 6%;
+		margin-right: 6%;
+		float: right;
+	}
+
+	.register-call-to-action h1 {
+		float: right;
+		font-family: Monad, san-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 5vw;
+		line-height: 72px;
+		text-align: center;
+		color: #000000;
+	}
+
+	.register-call-to-action h1 .X {
+		color: #F2A702;
+	}
+
+	.register-call-to-action h1 .hack {
+		color: #1071F3;
+	}
+
+	.register-call-to-action button {
+		height: 68px;
+		background: white;
+		border: 1px solid #E5193B;
+		box-sizing: border-box;
+		border-radius: 10px;
+		width: 70%;
+		margin: 20% 10%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 1.4vw;
+		color: #000000;
+	}
+
+	.register-form-container {
+		display: block;
+		width: 48%;
+		border: none;
+		padding: 1% 4%;
+		margin: 8% 0 8% 8%;
+		height: auto;
+		float: left;
+	}
+
+	.register-form-container h2 {
+		font-family: Gilroy-Bold, sans-serif;
+		margin-bottom: 2rem;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 400;
+		color: #000000;
+	}
+
+	.register-form-container .count {
+		margin-left: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-weight: 500;
+		font-size: 18px;
+		color: #000000;
+	}
+
+	.register-form-container legend {
+		margin-bottom: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-weight: 500;
+		font-size: 22px;
+		color: #000000;
+	}
+
+	.register-form-container label {
+		margin-top: 7%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-weight: 500;
+		font-size: 22px;
+		color: #000000;
+	}
+
+	.register-form-container input[type="text"],
+	.register-form-container input[type="email"],
+	.register-form-container input[type="number"],
+	.register-form-container input[type="password"] {
+		/* Rectangle 63 */
+		width: 100%;
+		padding: 10px;
+		border: none;
+		height: 59px;
+		margin-bottom: 9%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 20px;
+		color: #232732;
+		line-height: 16px;
+		background: rgba(196, 196, 196, 0.2);
+		border-radius: 5px;
+		transition: 1s;
+	}
+
+	.register-form-container input:hover {
+		border: 1px solid red;
+	}
+
+	.register-form-container input:focus {
+		outline: none;
+	}
+
+	.register-form-container .previous-btn {
+		width: 46%;
+		height: 50px;
+		float: left;
+		display: block;
+		font-family: Poppins, sans-serif;
+		font-size: 1.47vw;
+		color: #FA0048;
+		background: transparent;
+		border: none;
+		border-radius: 4px;
+		transition: 1s;
+	}
+
+	.register-form-container button:focus {
+		outline: none;
+	}
+
+	.register-form-container .previous-btn:hover {
+		border: 0.5px solid #FA0048;
+	}
+
+	.register-form-container .signup-btn {
+		width: 46%;
+		height: 50px;
+		float: right;
+		display: block;
+		font-family: Poppins, sans-serif;
+		font-size: 1.47vw;
+		color: white;
+		background: #FA0048;
+		border: none;
+		border-radius: 4px;
+	}
+
+	.register-form-container .txt {
+		margin-top: 4px;
+		vertical-align: center;
+	}
+
+	.register-form-container .age {
+		position: absolute;
+		display: inline block;
+		margin-top: 4%;
+		right: 50%;
+	}
+
+	.register-form-container .arrow1 {
+		margin-top: 8px;
+		margin-left: -20px;
+		margin-right: 20px;
+	}
+
+	.register-form-container .arrow2 {
+		margin-top: 4px;
+		margin-left: 12px;
+		margin-right: 20px;
+	}
+
+	.register-form-container .option {
+		position: absolute;
+		display: inline block;
+		margin-top: 1.5%;
+		right: 50%;
+	}
+}

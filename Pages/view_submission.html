@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>View Submission</title>
+  <link rel="stylesheet" href="../scss/component/view_submission.css">
+  <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+  <link rel="stylesheet" href="../scss/component/admin-dashboard-navbar.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body class="view_submission_body">
+    <nav> 
+        <div class="head_section1">
+            <div class="head_info0">
+                <a href="#" onclick="window.location.replace('../index.html')">
+                    <div class="head_pic0">
+                        <img src="../assets/ECX.svg"/>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-flex">
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <button class="drop-btn" onclick="window.location.replace('admin-dashboard-landing-page.html')">
+                                <!--<img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">-->
+                                Dashboard
+                            </button>
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="admin-application-submission.html">   
+                                <!--<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">-->
+                                Applications
+                            </a>
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="admin-submission-inbox.html">   
+                                <!--<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">-->
+                                <b>Submissions</b>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="i100">
+                        <div class="head_section2">
+                            <div class="head_logout">
+                                <p class="name">KEAZZY</p>
+                                <a href="#" class="view">VIEW PROFILE</a>
+                            </div>
+                            <div class="head_pic1">
+                                <div class="head_pic2"><img src="" class="head_pic02"/></div>
+                            </div>
+                            <div class="dropdown_button">
+                                <button class="dropdownBtn">
+                                    <img src="../assets/images/dashboard/dropdown-logo.svg">
+                                    <div class="dropdownProfile" id="dropdownProfile">
+                                        <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
+                                        <hr class="ddHr">
+                                        <div class="accountState">ADMIN</div>
+                                        <hr class="ddHr">
+                                        <div class="navigationLink">
+                                            <a href="admin-submission-inbox.html">view submissions</a>
+                                            <a href="teams.html">view Teams</a>
+                                        </div>
+                                        <hr class="ddHr">
+                                        <div class="otherNavs">
+                                            <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
+                                            <a id="logout_user">Logout</a>
+                                        </div>
+                                    </div>                                    
+                                </button>
+                            </div>    
+                        </div>
+                        <div class="linedivide"></div>
+                    </div>
+                </div>
+                <div class="logout-wrapper">
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <section class="view_submission__all">
+        <p class="view_back"><span>&lt;</span> <a href="admin-submission-inbox.html">Go back to submissions</a></p>
+        <section class="view_submissionDetails">
+            <p class="view_teamDetails">Team details</p>
+            <div class="teamDetails_box"></div>
+            <p class="view_projectDetails">Project details</p>
+            <div class="projectDetails_box">
+                <p>
+                    <span class="projectDetails_bigOne" id="proName">Name</span> <br>
+                    <span class="projectDetails_smallOne" id="proTag">An hacked web solution</span>
+                </p>
+            </div>
+            <div class="projectDetails_box">
+                <p>
+                    <span class="projectDetails_big">The problem HackX solves</span> <br>
+                    <span class="projectDetails_smallTwo" id="proSolves">
+                        HackX is made for hackers to hack the industry without hacking literally.
+                    </span>
+                </p>
+            </div>
+            <div class="projectDetails_box">
+                <p>
+                    <span class="projectDetails_big">Challenges I ran into</span> <br>
+                    <span class="projectDetails_smallThree" id="proChallenge">
+                        I guess I ran into some challenges but I can't explain them all
+                    </span>
+                </p>
+            </div>
+            <div class="projectDetails_box">
+                <p>
+                    <span class="projectDetails_big">Technologies I used</span> <br>
+                    <span class="projectDetails_small__flex">
+                        <span class="box_blue">HTML</span>
+                        <span class="box_green">Vue js</span>
+                        <span class="box_purple">Vue js</span>
+                    </span>
+                </p>
+            </div>
+            <div class="projectDetails_box">
+                <p>
+                    <span class="projectDetails_big">Links</span> <br>
+                    <span class="projectDetails_smallFour" id="proLink"><a href="#">https://hackx.github.io</a></span>
+                </p>
+            </div>
+            <div class="projectDetails_box__submission">
+                <img src="../../assets/images/Rectangle_119.png" alt="img" class="projectDetails_box__submissionImageOne">
+                <img src="../../assets/images/Play.png" alt="img" class="projectDetails_box__submissionPlayBtn" onclick="goToVideoLink()">
+                <video class="project_video" controls>
+                    <source src="" type="video/mp4">
+                    <source src="" type="video/ogg">
+                    Your browser does not suport the video tag.
+                </video>
+            </div> 
+            <div class="projectDetails_box__submissionTwo">
+                <!--<div class="projectDetails_box__light"><img src="../assets/images/dashboard/add-image.svg" alt="img"></div>
+                <div class="projectDetails_box__light"><img src="../assets/images/dashboard/add-image.svg" alt="img"></div>
+                <div class="projectDetails_box__light"><img src="../assets/images/dashboard/add-image.svg" alt="img"></div>
+                <div class="projectDetails_box__light"><img src="../assets/images/dashboard/add-image.svg" alt="img"></div>
+                --></div>
+        </section> 
+        <button type="submit" class="gradeSubmission" id="gradeBtn">Grade Submission</button>
+    </section><br>
+    <form class="gradeform">
+        <label for="grade">Grade</label><br>
+        <input type="text" name="grade" id="grade" placeholder="Enter a grade here 1-10"><br>
+        <label for="comment">Comment:</label><br>
+        <textarea name="comment" id="comment" cols="28" rows="10"></textarea><br>
+        <button type="submit" class="submit_gradeform">Submit</button>
+    </form>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/get_user.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/grade-submission.js"></script>
+</body>
+</html>

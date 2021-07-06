@@ -1,0 +1,58 @@
+html {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.dashboard_anonymous{
+		padding:0;
+		margin:0;
+		font-family:Poppins;
+		padding:20px;
+	  border:3px solid #1071f3;
+	  border-radius:5px;
+		}
+.dashboard_cancel{
+		position:relative;
+		width:77%;
+		margin:auto;
+		height:20px;
+		padding:0px 30px;
+		transform: translateY(30px);
+		}
+.dashboard_x{
+		position:absolute;
+		right:0px;
+		border:3px solid grey;
+	  border-radius:50%;
+	  font-size:25px;
+	  padding:0px 7px;
+		color:grey;
+		cursor: pointer;
+		}
+.anonymous_left{
+		width:230px;
+		}		
+.anonymous_pic{
+		width:100%;
+		}
+.anonymous_head{
+		font-size:25px;
+		font-weight:700;
+		}
+
+
+@media(min-width:768px){
+.dashboard_anonymous{	
+	  display:flex;
+	  justify-content: space-evenly;
+	  width:80%;
+	  margin:auto;
+	  align-items:center;
+	  padding:30px;
+		}		
+.anonymous_right{
+		width:40%;
+		}	
+	}

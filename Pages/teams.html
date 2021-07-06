@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard - My Team</title>
+    <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            width: 100%;
+            margin: 0;
+            padding:  0;
+        }
+        body {
+            background: #E5E5E5;
+            font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .mainMain {
+            width: 100%;
+            padding: 18px 5%;
+        }
+        .mainMain .head, .mainMain .note {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .mainMain .head {
+            margin: 0 0 5px 0;
+        }
+        .mainMain .dataContainer {
+            margin-top: 2%;
+            background: #ffffff;
+            border-radius: 5px;
+            padding: 3% 4%;
+        }
+        .mainMain .note {
+            margin: 0;
+            font-weight: 700;
+        }
+        .team-index {
+            margin: 1% 0 2% 0;
+        }
+        .mainMain .lead {
+            margin: 2% 0;
+        }
+        .tList {
+            margin-left: 30px;
+        }
+        .note {
+            font-weight: 600;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        @media (max-width: 550px) {
+            .note {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="mainHeader">
+        <nav> 
+            <div class="head_section1">
+                <div class="head_info0">
+                    <a href="#">
+                        <div class="head_pic0">
+                            <a href="../index.html"><img src="../assets/ECX.png"/></a>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-content">
+                    <div class="nav-content-flex">
+                        <div class="nav-links">
+                            <div class="nav-item">
+                                <button class="drop-btn">
+                                    <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                                    Dashboard
+                                </button>
+                                <div class="dropDown-content">
+                                    <a class="filter" href="#timelineHead">Timeline</a>
+                                    <a id="announDropBtn" class="filter" href="#announHead">Announcements</a>
+                                    <a class="filter" href="#overviewHead">Overview</a>
+                                </div> 
+                            </div>
+                            <div class="nav-item br30">
+                                <a href="dashboard-submissions.html">   
+                                    <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
+                                    Submission
+                                </a>
+                            </div>
+                        </div>
+                        <div class="i100">
+                            <div class="head_section2">
+                                <div class="head_logout">
+                                    <p class="name">KEAZZY</p>
+                                    <a href="profile-page.html" class="view">VIEW PROFILE</a>
+                                </div>
+                                <div class="head_pic1">
+                                    <div class="head_pic2"><img src="" class="head_pic02"/></div>
+                                </div>
+                                <div class="dropdown_button">
+                                    <button class="dropdownBtn">
+                                        <img src="../assets/images/dashboard/dropdown-logo.svg">
+                                        <div class="dropdownProfile" id="dropdownProfile">
+                                            <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
+                                            <hr class="ddHr">
+                                            <div class="accountState">Participant</div>
+                                            <hr class="ddHr">
+                                            <div class="navigationLink">
+                                                <a href="profile-page.html">Your Profile</a>
+                                                <a href="dashboard-submissions.html">Your submissions</a>
+                                                <a href="teams.html">Your Team</a>
+    
+                                            </div>
+                                            <hr class="ddHr">
+                                            <div class="otherNavs">
+                                                <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
+                                                <!--<a>Settings</a>-->
+                                                <a id="logout_user">Logout</a>
+                                            </div>
+                                        </div>                                    
+                                    </button>
+                                </div>    
+                            </div>
+                            <div class="linedivide"></div>
+                        </div>
+                    </div>
+                    <div class="logout-wrapper">
+                        <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div> 
+    </header>
+    <main class="mainMain">
+        <h1 class="head">Dashboard <b>> Teams</b></h1>
+        <div class="dataContainer">
+            <div class="f1">
+                <h2 class="team-name">{{ team name }}</h2>
+                <h3 class="team-index">{{ team index }}</h3>
+            </div>
+            <div class="sector"> Sector: sector</div>
+            <div class="lead"> Team lead: lead</div>
+            <div class="team-members">
+                <legend style="font-weight: 700; margin: 0 0 8px 0;">Members</legend>
+                <ul class="tList"></ul>
+            </div>
+            <br><br>
+            <h4 class="note">
+                <div style="font-weight: 900; font-size: 19px; margin-right: 15px;">NOTE: </div>
+                <div>
+                    The Team lead should submit on behalf of their team,<br> 
+                    no submission will be accepted from any other team member.
+                </div>
+            </h4>
+        </div>
+    </main>    
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/get_user.js"></script>
+    <script src="../js/teams.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" intial-scale="1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../scss/component/dashboard_page.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<title>Dashboard</title>
+	<style>
+		.loadCont {
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+  			flex-direction: row;
+			background: transparent;
+  			justify-content: center;
+  			align-items: center;
+		}
+		.loadingCircle {
+  			border: 22px solid #ececec;
+  			border-radius: 50%;
+			border-top: 22px solid #1c90dd;
+			box-shadow: 2px 2px 2px solid black;
+  			width: 150px;
+  			height: 150px;
+  			-webkit-animation: spin 2s linear infinite; /* Safari */
+  			animation: spin 2s linear infinite;
+		}
+		@media (max-width: 700px) {
+			.loadCont {
+				top: 15%;
+			}
+		}
+		/* Safari */
+		@-webkit-keyframes spin {
+  			0% { -webkit-transform: rotate(0deg); }
+  			100% { -webkit-transform: rotate(360deg); }
+		}
+
+		@keyframes spin {
+ 			0% { transform: rotate(0deg); }
+  			100% { transform: rotate(360deg); }
+		}
+	</style>
+</head>
+
+<body>
+	<div class="nav_section">
+		<section class="head_section1">
+			<section class="head_info0">
+				<div class="head_pic0"><a href="../index.html"><img src="../assets/ECX.png" /></a></div>
+			</section>
+			<section class="head_section2">
+				<button class="head_logout" id="logout_user">LOGOUT</button>
+				<div class="head_pic1">
+					<div class="head_pic2"><img src="" class="head_pic02" /></div>
+				</div>
+				<div class="head_drop">&#9776</div>
+			</section>
+		</section>
+	</div>
+
+	<section class="navbar_second">
+		<div class="navbar_about"><a href="../index.html">Home</a></div>
+		<div class="navbar_about"><a href="../Pages/About.html">About</a></div>
+		<!--<div class="navbar_ment"><a href="#">Mentors</a></div> -->
+		<div class="navbar_sch"><a href="../index.html#schedule">Schedule</a></div>
+		<div class="navbar_sch"><a href="../index.html#contact">Contact</a></div>
+		<!-- <div class="navbar_inbox"><a href="../Pages/dashboard-submissions.html">Inbox</a></div> -->
+		<div class="navbar_reg2"><a class="navbar_reg3" href="../Pages/Register.html">REGISTER</a></div>
+		<div class="navbar_log"><a class="navbar_log2" href="../Pages/Login.html">LOGIN</a></div>
+	</section>
+
+	<header class="dashboard_header">hackX<b> > Dashboard</b></header>
+	<div class="loadCont">
+		<div class="loadingCircle"></div>
+	</div>
+	<div class="d_all">
+		<div class="d_all__one">
+			<div class="header_head">
+				<div class="header_one">
+					<div class="header_one__app">
+						<a href="#">MY APPLICATION</a>
+						<div class="line"></div>
+					</div>
+				</div>
+				<div class="header_two">
+					<div class="header_two__time">
+						<div></div><a href="#">TIMELINE</a>
+						<div class="lineActive1"></div>
+					</div>
+					<div class="header_two__prize">
+						<div></div><a href="#">PRIZES</a>
+						<div class="lineActive2"></div>
+					</div>
+					<div class="header_two__over">
+						<div></div><a href="#">OVERVIEW</a>
+						<div class="lineActive3"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="dashboard_all__opacity">
+				<div class="participant-info contrel">
+					<div class="head">
+						Fill the following information
+					</div>
+					<div class="response-bar">
+						<div class="circles">
+							<span class="dot" onclick="currentSlide(1)" id="un"></span>
+							<span class="dot" onclick="currentSlide(2)" id="duex"></span>
+							<span class="dot" onclick="currentSlide(3)" id="trois"></span>
+							<span class="dot" onclick="currentSlide(4)" id="quarte"></span>
+							<!--
+								<span class="dot" onclick="currentSlide(5)" id="quinze"></span>
+							<span class="dot" onclick="currentSlide(6)" id="six"></span>
+							-->
+							<button class="prev" id="prev" onclick="plusSlides(-1)">PREVIOUS</button>
+							<button class="next" id="finish" type="submit">FINISH</button>
+							<button class="next" id="next"
+								onclick="plusSlides(1); return validateInput();">NEXT</button>
+						</div>
+					</div>
+					<form id="formElement">
+						<div class="infoSlide">
+							<div class="reply">
+								<header class="contestant-bio"
+									style="display: flex; justify-content: space-between; padding: 2% 3% 0 3%;">
+									<b>BIO</b>
+									<span id="count">0 / 50 words</span>
+								</header>
+								<textarea class="inputarea" id="bio"
+									placeholder="Write something about yourself in less than 50 words, also State the names of your team members and their respective tracks"
+									name="bio" required></textarea>
+							</div>
+						</div>
+						<!--
+						<div class="infoSlide">
+							<div class="reply biodata-img" id="biodata-img">
+								<header class="contestant-bio"><b>BIODATA IMAGE</b></header>
+								<p>
+									<em style="font-family: Montserrat; font-style: italic">
+										Upload a form of student Identification(student biodata, student ID card) not more than 2MB.
+									</em>
+								</p>
+								<div id="preview-container" class="imageDialogContainer">
+									<img src="../assets/images/dashboard/add-image.svg" id="imageUpload"
+										class="imageUpload">
+									<input type="file" id="imageFile" class="imageFile" name="picture"
+										accept=".gif, .jpg, .png" multiple required/>
+									<img id="imagePreview" alt="preview image" class="imagePreview" />
+									<div id="imageName" class="imageName" title="image name"></div>
+									<button id="deleteImage" class="deleteImage">Delete</button>
+								</div>
+							</div>
+						</div>
+						-->
+						<div class="infoSlide">
+							<div class="reply" id="genderInfo">
+								<header class="contestant-bio"></header>
+								<div class="selectarea">
+									<div class="inst">
+										<legend>GENDER</legend>
+										<div
+											style="display: flex; flex-direction: row; align-items: center; height: 35px; margin-bottom: 5px">
+											<input style="width: auto; display: inline-block;" type="radio" id="rad1"
+												name="gender" value="male" onchange="radioValueM()">
+											<label style="margin-left: 20px" for="rad1">Male</label>
+										</div>
+										<div
+											style="display: flex; flex-direction: row; align-items: center; height: 35px; margin-bottom: 15px">
+											<input style="width: auto; display: inline-block;" type="radio" id="rad2"
+												name="gender" value="female" onchange="radioValueF()">
+											<label style="margin-left: 20px" for="rad2">Female</label>
+										</div>
+									</div>
+									<div class="dept">
+										<label class="contestant-bio">PHONE NUMBER</label><br>
+										<input type="tel" placeholder="Phone No" name="number" id="phoneNo" required>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="infoSlide">
+							<div class="reply">
+								<header class="contestant-bio">WHICH OF THE FOLLOWING DESCRIBES YOU BEST?</header>
+								<form class="inputarea2">
+									<div class="contestant-description">
+										<input type="checkbox" name="track" id="customCheckbox" value="Designer"
+											onclick="return ValidateTrack()" />
+										<label for="customCheckbox">Designer</label>
+
+									</div>
+									<div class="contestant-description">
+										<input type="checkbox" name="track" id="customCheckbox2"
+											value="Frontend Developer" onclick="return ValidateTrack()" />
+										<label for="customCheckbox2">Frontend Developer</label>
+									</div>
+									<div class="contestant-description">
+										<input type="checkbox" name="track" id="customCheckbox3"
+											value="Backend Developer" onclick="return ValidateTrack()" />
+										<label for="customCheckbox3">Backend Developer</label>
+									</div>
+									<div class="contestant-description">
+										<input type="checkbox" name="track" id="customCheckbox4"
+											value="Mobile Developer" onclick="return ValidateTrack()" />
+										<label for="customCheckbox4">Mobile Developer</label>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="infoSlide">
+							<div class="reply">
+								<header class="contestant-bio" style="font-style: italic;">Add link to your website, blog, Github, LinkedIn,
+									Dribbble, Kaggle or anywhere your work stands out
+								</header>
+								<p>
+									<em style="font-family: Montserrat; font-weight: 800;">Make sure to click the 'add link' button to add your link</em>
+								</p>
+								<div class="inputlink">
+									<div class="link-head">PORTFOLIO LINK</div>
+									<div class="link-address">
+										<input type="text" name="link" id="link" required>
+										<div class="red-circle">
+											<div></div>
+										</div>
+									</div>
+									<button class="new-profile"><b>+ Add Link</b></button>
+								</div>
+							</div>
+						</div>
+						<!--
+						<div class="infoSlide">
+							<div class="reply">
+								<header class="contestant-bio">Select your Institution</header>
+								<div class="selectarea">
+									<div class="inst">
+										<legend>INSTITUTION</legend>-->
+										<!-- <input type="text" name="institution" list="const-inst-list" id="institution" placeholder="Institution"/> --><!--
+										<select class="sel" id="institution" name="institution"
+											placeholder="Institution" required>
+											<option>YABATECH</option>
+											<option>University of Ibadan</option>
+											<option>Obafemi Awolowo University</option>
+											<option>University of Lagos</option>
+											<option>University of Ilorin</option>
+											<option>Covenant University</option>
+											<option>Babcock/Bells University</option>
+											<option>Ibadan polytechnic</option>
+											<option>Federal University of Technology, Akure</option>
+											<option>Federal University of Agriculture, Abeokuta</option>
+											<option>Kwara State University</option>
+											<option>Lagos State University</option>
+											<option>Adekunle Ajasin University, Akungba</option>
+											<option>University of Ado-ekiti</option>
+										</select>
+									</div>
+									<div class="dept">
+										<legend>DEPARTMENT</legend>
+										<input type="text" name="department" id="department" placeholder="Department" required>
+									</div>
+								</div>
+							</div>
+						</div>-->
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="d_all__two">
+			<div class="dashboard-info">
+				<span class="hack">HACK</span>
+				<span class="X">X</span>
+				<div class="bold">HACKATHON STARTS</div>
+				November 7th
+				<br>
+				<br>
+				<div class="bold">Ends</div>
+				November 21st
+			</div>
+
+			<div class="progress_section">
+				<p class="progress_head">PROGRESS</p>
+				<p class="progress_percent">25%</p>
+				<div class="progress_bar">
+					<div class="progress_bar__circleOne">1</div>
+					<div class="progress_bar__line"></div>
+					<div class="progress_bar__circleTwo"></div>
+					<div class="progress_bar__line"></div>
+					<div class="progress_bar__circleThree"></div>
+					<div class="progress_bar__line"></div>
+					<div class="progress_bar__circleFour"></div>
+				</div><br>
+			</div>
+		</div>
+	</div>
+	<div id="displayy_mobile">
+		<div class="display_txt">
+			<p class="display_txt__one">Nothing to display now</p>
+			<p class="display_txt__two">Check back soon</p>
+			<img src="../assets/images/dashboard/code-shape-1-1.png" alt="NoDisplay">
+		</div>
+	</div>
+	<div id="submit_popup">
+		<img src="../assets/images/Rectangle.png" alt="close" id="close_popup">
+		<p class="submit_question">Are you sure you want to submit?</p>
+		<button class="submit_popup__btn" style="cursor: pointer;">Submit</button>
+	</div>
+	<!--<p class="dashboard_submissionSuccessful">We've Received Your Details<br> Please Check Back Later.</p>-->
+	<p class="dashboard_submissionSuccessful">Thank You For Applying For hackX<br> You Will Hear From Us Soon Via
+		Email. <br>Please, always check your Mailbox, and don't forget the Spam Folder.</p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="../js/avatar.js"></script>
+	<script src="../js/dashboard-navbar.js"></script>
+	<script src="../js/dashboard_page_style.js"></script>
+	<script src="../js/dashboard_page_val_submit.js"></script>
+	<script src="../js/dashboard_page_submit.js"></script>
+	<script src="../js/logout.js"></script>
+	<script src="../js/progress.js"></script>
+	<script src="../js/avatar.js"></script>
+</body>
+
+</html>

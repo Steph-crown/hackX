@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard submitted screen</title>
+    <link href="../scss/component/dashboard-submitted-screen.css" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="head_section1">
+            <div class="head_info0">
+                <a href="#">
+                    <div class="head_pic0">
+                        <a href="../index.html"><img src="../assets/ECX.svg" /></a>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-flex">
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <button class="drop-btn">
+                                <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                                Dashboard
+                            </button>
+                            <div class="dropDown-content">
+                                <a class="filter" href="main_dashboard_page.html#timeline">Timeline</a>
+                                <a id="announDropBtn" class="filter"
+                                    href="main_dashboard_page.html#announcemment">Announcements</a>
+                                <a class="filter" href="main_dashboard_page.html#overview">Overview</a>
+                            </div>
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="dashboard-submissions.html">
+                                <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
+                                Submission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="i100">
+                        <div class="head_section2">
+                            <div class="head_logout">
+                                <p class="name">KEAZZY</p>
+                                <a href="profile-page.html" class="view">VIEW PROFILE</a>
+                            </div>
+                            <div class="head_pic1">
+                                <div class="head_pic2"><img src="../assets/images/sample.jpg" class="head_pic02" />
+                                </div>
+                            </div>
+                            <div class="dropdown_button">
+                                <button class="dropdownBtn">
+                                    <img src="../assets/images/dashboard/dropdown-logo.svg">
+                                    <div class="dropdownProfile" id="dropdownProfile">
+                                        <div class="username">Signed in as <span class="user_username">Keazzy</span>
+                                        </div>
+                                        <hr class="ddHr">
+                                        <div class="accountState">Participant</div>
+                                        <hr class="ddHr">
+                                        <div class="navigationLink">
+                                            <a href="profile-page.html">Your Profile</a>
+                                            <a href="dashboard-submissions.html">Your Submissions</a>
+                                            <a>Your Teams</a>
+                                        </div>
+                                        <hr class="ddHr">
+                                        <div class="otherNavs">
+                                            <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with"
+                                                target="_blank">Help</a>
+                                            <!-- <a>Settings</a> -->
+                                            <a id="logout_user">Logout</a>
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="linedivide"></div>
+                    </div>
+                </div>
+                <div class="logout-wrapper">
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    <div class="dashboard-submitted-screen">
+        <div class="headBar">
+            hackX <b> > Dashboard</b>
+        </div>
+        <div class="contentBar">
+            <div class="horRow">
+                <div class="helloBar">
+                    <div class="HdCnt" id='scrName'>Hello</div>
+                    <div class="txtCnt">Not Required </div>
+                    <hr class="horLineCnt">
+                </div>
+                <div class="mainCnt">
+                    <section class="inputResult">
+                        <div class="title">The problem <span id='scrName'>hello</span> solves</div>
+                        <div class="scrProb">
+                            <p class="p1">Problem statement:<br>
+                                Many investors these days have a hard time looking for the right property to invest in.
+                                Also they’re not able to get the right share partners for the investment they make
+                            </p>
+                            <p class="p2">Solution: <br>
+                                Our idea does not only provide a platform for the investors to invest and find the right
+                                property
+                                but also enables to interact with thier partners and discuss about the investemet.
+                                We will be linking the app to a stock app so that we get regular stock updates in
+                                rea-time.
+                                All the transactiions will be securely done through Google’s Api....
+                                this will secure the transactions
+                            </p>
+                        </div>
+                    </section>
+                    <section class="inputResult">
+                        <div class="title">Challenges I ran into</div>
+                        <p class="p1" id='scrChallenge'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Faucibus nulla aenean urna risus, purus nunc, mauris non eu.
+                            Risus congue urna aliquet mi tellus. Aliquam turpis feugiat blandit nisl,
+                            ac suspendisse cursus sed.
+                            Sagittis mi imperdiet condimentum rhoncus viverra condimentum in integer gravida.
+                            Turpis nunc amet sed tincidunt elit vitae, felis nec.
+                            Ut arcu eget volutpat vestibulum, purus massa, sagittis faucibus.
+                            Integer quis eget tortor ut ac sed lectus suspendisse ut.
+                            Enim pretium nibh non dolor
+                        </p>
+                    </section>
+                    <section class="inputResult">
+                        <div class="title">Technologies I used</div>
+                        <div class="techList">
+                            <!--
+                                <span class="techUsed" id='techUsedOne'>javascript</span>
+                                <span class="techUsed" id='techUsedTwo'>rx</span>
+                                <span class="techUsed" id='techUsedThree'>asp</span>
+                            -->
+                        </div>
+                    </section>
+                    <section class="inputResult">
+                        <header><b>Links</b></header>
+                        <div class="link">https://hackx.github.io</div>
+                    </section>
+                    <section class="inputResult">
+                        <div class="title">Attachments</div>
+                        <div class="attachmentImg">
+                            <div class="attachments"></div>
+                            <div class="attachments"></div>
+                            <div class="attachments"></div>
+                            <div class="attachments"></div>
+                            <div class="attachments"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="blank">
+                <div class="blank1">
+                </div>
+                <div class="blank2">
+
+                </div>
+            </div>
+        </div>
+        <!-- <button class="editBtn">EDIT SUBMISSION</button> -->
+    </div>
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/get_user.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/dashboard_submitted_screen.js"></script>
+</body>
+
+</html>

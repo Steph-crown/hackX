@@ -1,16 +1,36 @@
 // abstract
-@import 'sass/abstract/mixins';
-@import 'sass/abstract/variables';
+@import "../scss/abstract/mixins";
+@import "../scss/abstract/variables";
 
 // base
-@import 'sass/base/base';
-@import 'sass/base/typography';
-@import 'sass/base/utilities';
+@import "../scss/base/base";
+@import "../scss/base/typography";
+@import "../scss/base/utilities";
 
 // layout
+@import './layout/navbar';
+@import "./layout/footer";
 
 
 // components
 
+@import "./component/hero";
+@import "./component/about";
+@import "./component/30Hours";
+@import "./component/contact";
+@import "./component/goal";
+@import "./component/mentor";
+@import "./component/schedule";
+@import "./component/partners";
+@import "./component/progress";
+@import "./component/d_header";
+@import "./component/submission_section";
+
+
 
 // pages
+@import "./layout/register";
+@import "./layout/about";
+@import "./component/dashboard_page";
+@import "./pages/No_display";
+@import "./page/view_submission";

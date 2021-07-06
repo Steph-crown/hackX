@@ -1,0 +1,81 @@
+.hours-body {
+	font-family: "poppins";
+}
+
+.one30 {
+	padding: 10px;
+}
+
+.one30,
+.first30,
+.second30,
+.third30,
+.fourth30 {
+	text-align: center;
+}
+
+.one30,
+.thirty_30,
+.hours_30,
+.of_30,
+.train0_30 {
+	font-weight: bold;
+	margin: auto;
+}
+
+.thirty_30 {
+	font-size: 5rem;
+	color: #E5193B;
+}
+
+.hours_30,
+.of_30 {
+	font-size: 35px;
+}
+
+.first30,
+.second30,
+.third30,
+.fourth30 {
+	margin-top: 1pc;
+	padding: 15px;
+	width: 50%;
+	margin: 1pc auto 3pc auto;
+}
+
+.tracks30 {
+	font-size: 23px;
+	margin-bottom: .8pc;
+	margin-left: 3rem;
+}
+
+.partners_img {
+	width: 50%;
+}
+
+.two30 {
+	display: none;
+}
+
+
+@media (min-width:768px) {
+	.train0_30 {
+		width: 40%;
+	}
+
+	.two30 {
+		width: 75%;
+		display: flex;
+		justify-content: space-evenly;
+		align-self: center;
+		margin: auto;
+	}
+
+	.first30,
+	.second30,
+	.third30,
+	.fourth30 {
+		width: 17%;
+		padding: 18px;
+	}
+}

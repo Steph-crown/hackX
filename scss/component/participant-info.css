@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+html {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.participant_info__body{
+	background: whitesmoke;
+}
+* {
+    box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+	.header_one{
+		padding: 3% 8%;
+		border: 1px solid #ffffff;
+		border-radius: 5px;
+		background: #ffffff;
+		width: 84%;
+		margin-left: 8%;
+	}
+	.header_one__app{
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 14px;
+	}
+	.header_one__app a{
+		text-decoration: none;
+		color: #1071F3;
+	}
+	.participant-info {
+	background: #ffffff;
+	margin-top: 15px;
+	margin-left: 8%;
+	width: 84%;
+	padding: 4%;
+	}
+	.participant-info .head {
+	width: 100%;
+	margin: 0 0 1.5% 0;
+	padding: 24px 20px;
+	background: rgba(48, 152, 250, 0.3);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 1.8;
+	border-radius: 4px;
+	text-align: right;
+	}
+	.participant-info .response-bar {
+	width: 100%;
+	height: 46px;
+	display: block;
+	margin: 0;
+	}
+	.participant-info .response-bar .circles {
+	width: 100%; 
+	padding-top: 1.4%;
+	height: 50px;
+	margin: 0;
+	display: inline-block;
+	text-align: center;
+	}
+	.participant-info .response-bar .circles .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 10px 2px;
+	background-color: whitesmoke;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+	}
+	.participant-info .next,.participant-info .prev {
+	border-radius: 5px;
+	width: 60px;
+	height: 40px;
+	background: #1071F3;
+	color: white;
+	border: none;
+	font-size: 14px;
+	margin-top: -0.9%;
+	user-select: none;
+	font-family: 'Montserrat', sans-serif;
+	transition: .6s ease-out;
+	cursor: pointer;
+	}
+	.participant-info button {
+	outline: none;
+	}
+	.participant-info .prev {
+	width:90px;
+	background: rgba(16, 113, 243, 0.4);
+	float: left;
+	color: #ffffff;
+	}
+	.participant-info .next {
+	float: right;
+	}
+	.participant-info #finish {
+	display: none;
+	}
+	.active, .dot:hover {
+	border: 2px solid #1071F3;
+	}  
+	.participant-info .next:hover, .participant-info .prev:hover {
+	border: none;
+	outline: none;
+	font-size: 15px;
+	}
+	.participant-info .reply {
+	display: block;
+	width: 100%;
+	margin: 2% 0;
+	}
+	.participant-info .reply .contestant-bio {
+	width: 100%;
+	text-align: left;
+	margin: 0.5% 0;
+	font-size: 14px;
+	font-family: 'Montserrat', sans-serif;
+	}
+	.participant-info .reply .inputarea {
+	width: 100%;
+	background: whitesmoke;
+	height: 400px;
+	padding: 4% 0;
+	border-radius: 8px;
+	margin: 1% 0;
+	border: none;
+	resize: none;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	outline: none;
+	}
+	.participant-info .reply .inputarea2 {
+	width: 100%;
+	background: white;
+	padding: 1% 0;
+	border-radius: 8px;
+	margin: 1% 0;
+	border: none;
+	resize: none;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	}
+	.participant-info .reply .inputarea:hover {
+	border: 2px solid #1071F3;
+	}
+	/*the checkbox for the track selection*/
+	.contestant-description {
+	width: 100%;
+	margin: 3% 0;
+	padding: 1.5% 4%;
+	border: 1.5px solid #1071F3;
+	border-radius: 4px;
+	font-family: 'Montserrat', sans-serif;
+	transition: .7s;
+	color: #1071F3;
+	}
+	.contestant-description:hover {
+	background: #1071F3;
+	color: white;
+	}
+	.contestant-description label {
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 25px;
+	font-size: 14px;
+	vertical-align: bottom;
+	position: relative;
+	}
+	.contestant-description input[type=checkbox] {
+	display: none;
+	}
+	.contestant-description input[type=checkbox] + label:after {
+	font-family: 'Material Icons';
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 0;
+	border: 2px solid #1071F3;
+	border-radius: 2px;
+	}
+	.contestant-description:hover input[type=checkbox] + label:after {
+	background: lightgray;
+	border-radius: 4px;
+	}
+	.contestant-description:hover input[type=checkbox]:checked + label:after {
+	border: 1.5px solid whitesmoke;
+	}
+	.contestant-description input[type=checkbox]:checked + label:after {
+	content: "\E5CA";
+	color: #fff;
+	font-size: 26px;
+	text-align: center;
+	line-height: 24px;
+	background: #1071F3;
+	border-color: #1071F3;
+	}
+	.inputlink {
+	width: 100%;
+	background: white;
+	margin: 0;
+	padding: 0;
+	}
+	.inputlink .link-head {
+	font-size: 22px;
+	font-weight: 600;
+	font-family: 'Montserrat', sans-serif;
+	margin: 4% 0;
+	}
+	.inputlink input {
+	width: 95%;
+	margin: 0 0 2% 0;
+	background: whitesmoke;
+	height: 50px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	float: left;
+	padding: 1% 5%;
+	}
+	.inputlink .red-circle {
+	width: 5%;
+	height: 50px;
+	display: inline-block;
+	margin: 0 0 2% 0;
+	padding: 0;
+	text-align: center;
+	vertical-align: middle;
+	}
+	.inputlink .red-circle div {
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	transform: translate(50%,50%);
+	border: 3px solid rgb(253,191,209);
+	background: whitesmoke;
+	}
+	.inputlink .new-profile {
+	width: 100%;
+	padding: 1%;
+	color: rgb(140,120,38);  
+	background: rgb(255,235,153);
+	font-size: 18px;
+	border: none;  
+	border-radius: 5px;
+	cursor: pointer;
+	}
+	.selectarea {
+	width: 100%;
+	background: white;
+	height: 400px;
+	padding: 4% 0;
+	border-radius: 8px;
+	margin: 1% 0;
+	border: none;
+	resize: none;
+	text-align: left;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 14px;
+	}
+	.selectarea .inst {
+	float: left;
+	width: 100%;
+	margin: 0;
+	}
+	.selectarea .dept {
+	width: 100%;
+	margin: 0;
+	}
+	.selectarea input {
+	width: 80%;
+	margin: 2% 0;
+	height: 50px;
+	outline: none;
+	border: none;
+	background: whitesmoke;
+	padding: 5%;
+	border: 4px;
+	}
+}
+@media screen and (min-width: 769px) {
+.participant_info__body{
+	background: #ffffff;
+}
+.header_one{
+	display: none;
+}
+.participant-info {
+    width: 100%;
+    margin: 0;
+    padding: 8%;
+}
+.participant-info .head {
+    width: 100%;
+    margin: 0 0 1.5% 0;
+    padding: 24px 20px;
+    background: rgba(48, 152, 250, 0.3);
+    border: 3px solid #1071F3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.8;
+    border-radius: 4px;
+    text-align: right;
+}
+.participant-info .response-bar {
+    width: 100%;
+    height: 46px;
+    display: block;
+    margin: 0;
+}
+.participant-info .response-bar .circles {
+    width: 100%; 
+    padding-top: 1.4%;
+    height: 50px;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+}
+.participant-info .response-bar .circles .dot {
+        cursor: pointer;
+        height: 20px;
+        width: 20px;
+        margin: 0 2px;
+        background-color: whitesmoke;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+.participant-info .next,.participant-info .prev {
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    background: #1071F3;
+    color: white;
+    border: none;
+    font-size: 16px;
+    margin-top: -0.9%;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: .6s ease-out;
+    cursor: pointer;
+}
+.participant-info button {
+    outline: none;
+}
+.participant-info .prev {
+    width: 130px;
+    background: rgb(255,235,153);
+    float: left;
+    color: rgb(216,204,151);
+}
+.participant-info .next {
+    float: right;
+}
+.participant-info #finish {
+    display: none;
+}
+.active, .dot:hover {
+    border: 2px solid #1071F3;
+  }  
+.participant-info .next:hover, .participant-info .prev:hover {
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+}
+.participant-info .reply {
+    display: block;
+    width: 100%;
+    margin: 2% 0;
+}
+.participant-info .reply .contestant-bio {
+    width: 100%;
+    text-align: left;
+    margin: 0.5% 0;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.participant-info .reply .inputarea {
+    width: 100%;
+    background: whitesmoke;
+    height: 400px;
+    padding: 4% 0;
+    border-radius: 8px;
+    margin: 1% 0;
+    border: none;
+    resize: none;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+.participant-info .reply .inputarea2 {
+    width: 100%;
+    background: white;
+    padding: 1% 0;
+    border-radius: 8px;
+    margin: 1% 0;
+    border: none;
+    resize: none;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+.participant-info .reply .inputarea:hover {
+    border: 2px solid #1071F3;
+}
+/*the checkbox for the track selection*/
+.contestant-description {
+    width: 100%;
+    margin: 3% 0;
+    padding: 1.5% 4%;
+    border: 1.5px solid #1071F3;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    transition: .7s;
+    color: #1071F3;
+}
+.contestant-description:hover {
+    background: #1071F3;
+    color: white;
+}
+.contestant-description label {
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 8%;
+  font-size: 22px;
+  vertical-align: bottom;
+  position: relative;
+}
+.contestant-description input[type=checkbox] {
+    display: none;
+}
+.contestant-description input[type=checkbox] + label:after {
+    font-family: 'Material Icons';
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: 0;
+    border: 2px solid #1071F3;
+    border-radius: 2px;
+}
+.contestant-description:hover input[type=checkbox] + label:after {
+    background: lightgray;
+    border-radius: 4px;
+}
+.contestant-description:hover input[type=checkbox]:checked + label:after {
+    border: 1.5px solid whitesmoke;
+}
+.contestant-description input[type=checkbox]:checked + label:after {
+    content: "\E5CA";
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    line-height: 24px;
+    background: #1071F3;
+    border-color: #1071F3;
+}
+.inputlink {
+    width: 100%;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+.inputlink .link-head {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin: 4% 0;
+}
+.inputlink input {
+    width: 95%;
+    margin: 0 0 2% 0;
+    background: whitesmoke;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    float: left;
+    padding: 1% 5%;
+}
+.inputlink .red-circle {
+    width: 5%;
+    height: 50px;
+    display: inline-block;
+    margin: 0 0 2% 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.inputlink .red-circle div {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translate(50%,50%);
+    border: 3px solid rgb(253,191,209);
+    background: whitesmoke;
+}
+.inputlink .new-profile {
+    width: 100%;
+    padding: 1%;
+    color: rgb(140,120,38);  
+    background: rgb(255,235,153);
+    font-size: 18px;
+    border: none;  
+    border-radius: 5px;
+    cursor: pointer;
+}
+.selectarea {
+    width: 100%;
+    background: white;
+    height: 400px;
+    padding: 4% 0;
+    border-radius: 8px;
+    margin: 1% 0;
+    border: none;
+    resize: none;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+}
+.selectarea .inst {
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+.selectarea .dept {
+    float: right;
+    width: 50%;
+    margin: 0;
+}
+.selectarea input {
+    width: 80%;
+    margin: 2% 0;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: whitesmoke;
+    padding: 5%;
+    border: 4px;
+}
+}

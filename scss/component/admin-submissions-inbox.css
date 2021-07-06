@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+html, body {
+    width: 100%;
+    margin: 0;
+    background: #E5E5E5;
+}
+main button, main button:hover {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 84px;
+    padding: 7px 0;
+    font-family: 'Nunito Sans', sans-serif;
+    cursor: pointer;
+}
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.submission-page {
+    width: 86%;
+    margin: 0 7%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.submission-page .button-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.3% 0;
+}
+.submission-page .button-header .head-one {
+    width: 286px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.submission-page .button-header .head-one .all-submissions {
+    background: #1071F3;
+    color: #FFFFFF;
+}
+.submission-page .button-header .head-one .unread-submissions {
+    background: #6dabfc;
+    color: #FFFFFF;
+}
+.submission-page .button-header .head-one .filter-submissions, 
+.submission-page .button-header .head-one .filter-submissions:hover {
+    background: #ffffff;
+    color: #000000;
+    padding-left: 8px;
+}
+.submission-page .button-header .head-one .filter-submissions .img-down {
+    margin: 0 7px 0 3px;
+}
+.submission-page .button-header .delete-submission {
+    background: #E5193B;
+    color: #FFFFFF;
+}
+.submission-page .submissions-section .submission-detail input[type="checkbox"] {
+    display: none;
+}
+.submission-page .submissions-section .submission-detail .column-one .checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background: #E5E5E5;
+    margin-right: 10%;
+    cursor: pointer;
+}
+.false-check {
+    display: none;
+}
+.submission-page .submissions-section {
+    background: white;
+    padding: 1.5%;
+    border-radius: 5px;
+    margin-bottom: 4%;
+}
+.submission-page .submissions-section .submission-detail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6% 0 6%;
+    cursor: pointer;
+}
+.submission-page .submissions-section .submission-detail input[type="checkbox"] {
+    display: none;
+}
+.submission-page .submissions-section .submission-detail .column-one {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.submission-page .submissions-section .submission-detail .column-one .checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background: #E5E5E5;
+    margin-right: 10%;
+}
+.submission-page .submissions-section .submission-detail .real-submission h5 {
+    margin: 2.5% 0;
+}
+.submission-page .submissions-section .submission-detail .time, 
+.submission-page .submissions-section .submission-detail .column-one .submission-tag {
+    color: rgba(0,0,0,0.6);
+    font-size: 14px;
+}
+.submission-page .submissions-section .submission-detail .column-one .participant-name {
+    color: #000000;
+    font-size: 15px;
+}
+.submission-page .submissions-section .submission-hr {
+    border: 0.02% solid rgba(0,0,0,0.3);
+}
+@media (max-width: 600px) {
+    .submission-page {
+        width: 90%;
+        margin: 0 5%;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    .submission-page .submissions-section .submission-detail .column-one {
+        width: 86%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .submission-page .submissions-section .submission-detail .column-one .checkbox {
+        width: 16px;
+        height: 16px;
+        border-radius: 5px;
+        background: #E5E5E5;
+        margin-right: 5%;
+    }
+    .submission-page .submissions-section .submission-detail .time, 
+    .submission-page .submissions-section .submission-detail .column-one .submission-tag {
+        color: rgba(0,0,0,0.6);
+        font-size: 10px;
+    }
+    .submission-page .submissions-section .submission-detail .column-one .participant-name {
+        color: #000000;
+        font-size: 12px;
+    }
+}
+
+main button#applhover, main button#applhover:hover {
+    cursor: auto;
+    width: 150px;
+}

@@ -1,0 +1,1335 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family: Monad;
+    src: url(../../fonts/Monad.otf);
+}
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background: #E5E5E5;
+    width: 100%;
+    margin: 0;
+}
+.hackx-dashboard {
+    display: none;
+}
+/* SMALL MOBILE VIEW */
+@media (max-width: 450px) {
+    .Dashboard2-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .Dashboard2-section .headbar {
+        display: none;
+    }
+    .mobileView {
+        display: block;
+        width: 100%;
+        margin: 0;
+        background: #E5E5E5;
+    }
+    .desktopView, .submission_section {
+        display: none;
+        width: 100%;
+        margin: 0;
+    }
+    .announcement, .prizes, .overview {
+        display: block;
+    }
+    .Dashboard2-section .mobileDashLink {
+        margin: 4% 0 14% 5%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4.8vw;
+    }
+    .Dashboard2-section .mobileDashLink a {
+        cursor: pointer;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4.8vw;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    .Dashboard2-section .mobileDashLink a:hover {
+        color: black;
+    }
+    .Dashboard2-section .sectionbar {
+        width: 90%; 
+        margin: 5%;
+    }
+    .Dashboard2-section .sectionbar .blueHead {
+        margin: 6% 7% 0 7%;
+        color: #0080FB;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4.6vw;
+        line-height: 1.8;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .mobViewHr {
+        margin: 5% 7%;
+        border: 1px solid lightgrey;
+    }
+    .Dashboard2-section .sectionbar .submission .substruction {
+        width: 100%;
+        margin-left: 7.5%;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashStatus {
+        margin: 0 7.5%;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4.8vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        padding: 5% 0;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime {
+        margin: 0 7.5%;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime .subDashTimeHd {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime .subDashTimeTxt {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 1);
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .briefo {
+        width: 60%;
+        margin: 0; 
+        padding-left: 8%;
+        display: inline-block;
+        text-align: left;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .briefo:hover {
+        color: rgba(0, 0, 0, 0.9);
+    }
+    .Dashboard2-section .sectionbar .fullView {
+        width: 40%;
+        margin: 0;
+        padding-right: 8%;
+        display: inline-block;
+        text-align: right;
+        float: right;
+    }
+    .Dashboard2-section .sectionbar .fullView a {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .Dashboard2-section .sectionbar section {
+        background: white;
+        border-radius: 5px;
+        margin-bottom: 7%;
+        padding: 3% 0 8% 0;
+        height: auto;
+    }  
+    .Dashboard2-section .sectionbar .timeline .active-head {
+        width: 100%;
+        margin: 0;
+        background: white;
+        line-height: 1.8;
+        padding: 3% 8% 3% 8%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .first {
+        font-size: 4.3vw;
+        display: inline-block;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second .bold {
+        font-weight: 700;
+        font-size: 4.35vw;
+        display: block;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .spnBtn {
+        margin: 0 3%;
+        padding: 1.3% 1.8%;
+        background: #0080FB;
+        color: rgba(253, 254, 255, 0.7);
+        font-size: 3.8vw;
+        text-transform: uppercase;
+        float: right;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .third {
+        font-size: 4vw;
+        margin-top: 1%;
+        text-align: left;
+    } 
+    /* COMING HEAD */
+    .Dashboard2-section .sectionbar .timeline .coming-head {
+        width: 100%;
+        margin: 4% 0;
+        background: transparent;
+        border-radius: 4px;
+        line-height: 1.6;
+        padding: 3% 8% 3% 8%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second .bold {
+        font-weight: 700;
+        font-size: 4.35vw;
+        display: block;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .spnBtn {
+        margin: 0 3%;
+        padding: 0.6% 3.8%;
+        background: #C4C4C4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 4.02vw;
+        text-transform: uppercase;
+        float: right;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .first {
+        font-size: 4.3vw;
+        display: inline-block;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .third {
+        font-size: 4vw;
+        margin-top: 1%;
+        text-align: left;
+    }
+    /* ANNOUNCEMENT SECTION */
+    .Dashboard2-section .sectionbar .announcement .paranounce {
+        margin: 0 8%;
+        padding: 4% 0;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.8vw;
+        line-height: 1.5;
+    }
+    .Dashboard2-section .sectionbar .announcement .paranounce .elem1 {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 4.18vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement .paranounce a {
+        color: #2864F0;
+        text-decoration: none;
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+    .Dashboard2-section .sectionbar .prizes .prH {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4.3vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .prizes .prHd {
+        background: white;
+        padding: 0 8%;
+        border-radius: 4px;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4.3vw;
+        line-height: 1.8;
+        font-weight: normal;
+    }
+    .Dashboard2-section .sectionbar .prizes .pH {
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .overview .image {
+        width: 90%;
+        height: auto;
+        margin: 0 5%;
+        background: url(../../assets/images/dashboard/overview-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 10% 6%;
+        text-align: center;
+        font-size: 11vw;
+        font-family: Monad, sans-serif;
+        color: white;
+        margin-bottom: 7%;
+    }
+    .Dashboard2-section .sectionbar .overview .image .X {
+        color: rgb(242,167,2);
+    }
+    .Dashboard2-section .sectionbar .overview .image .hackathon {
+        color: #2864F0;
+    }
+    .Dashboard2-section .sectionbar .overview .social {
+        background: whitesmoke;
+        width: 90%;
+        margin: 0 5% 7% 5%;
+        height: auto;
+        border-radius: 5px;
+        font-family: Nuito Sans, sans-serif;
+        font-size:5.6vw;
+        padding: 4% 5%;
+        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: stretch;
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .overview .social .img {
+        left: 0;
+        cursor: pointer;
+        margin-right: 6%;
+        width: 8vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .txt {
+        text-align: left;
+        width: 70%;
+        margin: 0 5% 0 15%;
+    }
+    .Dashboard2-section .sectionbar .overview .social .go {
+        right: 0;
+        cursor: pointer;
+        width: 8vw;
+        margin-left: 50%;
+    }
+    .Dashboard2-section .sectionbar .overview .social .last {
+        margin-left: 54%;
+    }
+}
+@media (min-width: 451px) and (max-width: 750px) {
+    .Dashboard2-section .headbar {
+        display: none;
+    }
+    .mobileView {
+        display: block;
+        width: 90%;
+        margin: 5%;
+        background: #E5E5E5;
+    }
+    .desktopView, .submission_section {
+        display: none;
+    }
+    .announcement, .prizes, .overview {
+        display: block;
+    }
+    .Dashboard2-section .mobileDashLink {
+        margin: 4% 0 14% 5%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4vw;
+    }
+    .Dashboard2-section .mobileDashLink a {
+        cursor: pointer;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4.8vw;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    .Dashboard2-section .mobileDashLink a:hover {
+        color: black;
+    }
+    .Dashboard2-section .sectionbar {
+        width: 90%; 
+        margin: 5%;
+    }
+    .Dashboard2-section .sectionbar .blueHead {
+        margin: 6% 7% 0 7%;
+        color: #0080FB;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4vw;
+        line-height: 1.8;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .mobViewHr {
+        margin: 5%;
+        border: 1px solid lightgrey;
+    }
+    .Dashboard2-section .sectionbar .submission .substruction {
+        width: 100%;
+        margin-left: 7.5%;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashStatus {
+        margin: 0 7.5%;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.8vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        padding: 5% 0;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime {
+        margin: 0 7.5%;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime .subDashTimeHd {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.2vw;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime .subDashTimeTxt {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.2vw;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 1);
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .briefo {
+        width: 60%;
+        margin: 0; 
+        padding-left: 8%;
+        display: inline-block;
+        text-align: left;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.1vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .briefo:hover {
+        color: rgba(0, 0, 0, 0.9);
+    }
+    .Dashboard2-section .sectionbar .fullView {
+        width: 40%;
+        margin: 0;
+        padding-right: 8%;
+        display: inline-block;
+        text-align: right;
+        float: right;
+    }
+    .Dashboard2-section .sectionbar .fullView a {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.1vw;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .Dashboard2-section .sectionbar section {
+        background: white;
+        border-radius: 5px;
+        margin-bottom: 7%;
+        padding: 3% 0 8% 0;
+        height: auto;
+    }  
+    .Dashboard2-section .sectionbar .timeline .active-head {
+        width: 100%;
+        margin: 0;
+        background: white;
+        line-height: 1.8;
+        padding: 3% 8% 3% 8%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .first {
+        font-size: 3.34vw;
+        display: inline-block;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second .bold {
+        font-weight: 700;
+        font-size: 3.9vw;
+        display: block;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .spnBtn {
+        margin: 0 3%;
+        padding: 1.3% 1.8%;
+        background: #0080FB;
+        color: rgba(253, 254, 255, 0.7);
+        font-size: 2.9vw;
+        text-transform: uppercase;
+        float: right;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .third {
+        font-size: 3.2vw;
+        margin-top: 1%;
+        text-align: left;
+    } 
+    /* COMING HEAD */
+    .Dashboard2-section .sectionbar .timeline .coming-head {
+        width: 100%;
+        margin: 4% 0;
+        background: transparent;
+        border-radius: 4px;
+        line-height: 1.6;
+        padding: 3% 8% 3% 8%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second .bold {
+        font-weight: 700;
+        font-size: 3.9vw;
+        display: block;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .spnBtn {
+        margin: 0 3%;
+        padding: 0.6% 3.8%;
+        background: #C4C4C4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 3.1vw;
+        text-transform: uppercase;
+        float: right;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .first {
+        font-size: 3.34vw;
+        display: inline-block;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .third {
+        font-size: 3.2vw;
+        margin-top: 1%;
+        text-align: left;
+    }
+    /* ANNOUNCEMENT SECTION */
+    .Dashboard2-section .sectionbar .announcement .paranounce {
+        margin: 0 8%;
+        padding: 4% 0;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.1vw;
+        line-height: 1.5;
+    }
+    .Dashboard2-section .sectionbar .announcement .paranounce .elem1 {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 3.6vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement .paranounce a {
+        color: #2864F0;
+        text-decoration: none;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+    .Dashboard2-section .sectionbar .prizes .prH {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.8vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .prizes .prHd {
+        background: white;
+        padding: 0 8%;
+        border-radius: 4px;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 3.6vw;
+        line-height: 1.8;
+        font-weight: normal;
+    }
+    .Dashboard2-section .sectionbar .prizes .pH {
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .overview .image {
+        width: 90%;
+        height: auto;
+        margin: 0 5%;
+        background: url(../../assets/images/dashboard/overview-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 10% 6%;
+        text-align: center;
+        font-size: 8vw;
+        font-family: Monad, sans-serif;
+        color: white;
+        margin-bottom: 7%;
+    }
+    .Dashboard2-section .sectionbar .overview .image .X {
+        color: rgb(242,167,2);
+    }
+    .Dashboard2-section .sectionbar .overview .image .hackathon {
+        color: #2864F0;
+    }
+    .Dashboard2-section .sectionbar .overview .social {
+        background: whitesmoke;
+        width: 90%;
+        margin: 0 5% 7% 5%;
+        height: auto;
+        border-radius: 5px;
+        font-family: Nuito Sans, sans-serif;
+        font-size:3.3vw;
+        padding: 4% 5%;
+        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: stretch;
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .overview .social .img {
+        left: 0;
+        cursor: pointer;
+        margin-right: 6%;
+        width: 6vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .txt {
+        text-align: left;
+        width: 70%;
+        margin: 0 5% 0 15%;
+    }
+    .Dashboard2-section .sectionbar .overview .social .go {
+        right: 0;
+        cursor: pointer;
+        width: 6vw;
+        margin-left: 65%;
+    }
+    .Dashboard2-section .sectionbar .overview .social .last {
+        margin-left: 67%;
+    }
+}
+@media (min-width: 751px) and (max-width: 999px) {
+    .hackx-dashboard {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.2vw;
+        margin: 2% 5%;
+    }
+    .Dashboard2-section {
+        width: 48%;
+        margin-left: 3.5%;
+        margin-right: 3%;
+    }
+    .Dashboard2-section .headbar {
+        display: block;
+        width: 100%;
+        margin: 0 0 5% 0;
+        height: 60px;
+        background: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        border-radius: 5px;
+    }
+    .desktopView {
+        display: block;
+        background: #E5E5E5;
+    }
+    .mobileView {
+        display: none;
+    }
+    .Dashboard2-section .headbar .header-btn {
+        width: auto;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    .Dashboard2-section .headbar .header-btn button {
+        width: 100%;
+        height: 56px;
+        font-size: 1.8vw;
+        line-height: 56px; 
+        margin: 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        color: rgba(156, 99, 99, 0.4);
+    }
+    .Dashboard2-section .headbar .header-btn button:hover {
+        outline: none;
+        border: none;
+        color: #1071F3;
+    }
+    .Dashboard2-section .headbar .header-btn .border-bottom {
+        width: 100%;
+        background: #1071F3;
+        border: none;
+        height: 4px;
+        display: none;
+        border-radius: 5px;
+    }
+    .Dashboard2-section .headbar .active button {
+        color: #1071F3;
+    }
+    .Dashboard2-section .headbar .active .border-bottom {
+        display: block;
+    }
+    button {
+        margin-bottom: 5%;
+        border: none;
+        background: white;
+    }
+    .announcement, .prizes, .overview {
+        display: none;
+    }
+    .Dashboard2-section .sectionbar {
+        width: 100%; 
+        margin: 5% 0 0 0;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head {
+        width: 100%;
+        margin: 0;
+        background: white;
+        border-radius: 5px;
+        line-height: 1.6;
+        padding: 3% 5% 7% 5%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second .bold {
+        font-weight: 700;
+        font-size: 1.8vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second .spnBtn {
+        margin: 0 3%;
+        padding: 0.6% 2.2%;
+        background: #0080FB;
+        color: rgba(253, 254, 255, 0.7);
+        font-size: 1.62vw;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .first {
+        font-size: 1.60vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .third {
+        font-size: 1.55vw;
+        margin-top: 1%;
+    }
+    
+    /* COMING HEAD */
+    .Dashboard2-section .sectionbar .timeline .coming-head {
+        width: 100%;
+        margin: 0;
+        background: transparent;
+        border-radius: 4px;
+        line-height: 1.6;
+        padding: 3% 5% 7% 5%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second .bold {
+        font-weight: 700;
+        font-size: 1.8vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second .spnBtn {
+        margin: 0 3%;
+        padding: 0.6% 3.8%;
+        background: #C4C4C4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.62vw;
+        text-transform: uppercase;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .first {
+        font-size: 1.60vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .third {
+        font-size: 1.55vw;
+        margin-top: 1%;
+        margin-bottom: 3.5%;
+    }
+    .Dashboard2-section .sectionbar .announcement {
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+        border-radius: 4px;
+        background: white;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.55vw;
+        line-height: 1.6;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement .elem1 {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.6vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement a {
+        color: #2864F0;
+        text-decoration: none;
+    }
+    .Dashboard2-section .sectionbar .prizes {
+        width: 100%;
+        margin: 0;
+    }
+    .prH {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.6vw;
+        font-weight: bold;
+    }
+    .prHd {
+        background: white;
+        width: 100%;
+        margin: 0;
+        padding: 4% 8% 24% 8%;
+        border-radius: 4px;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.6vw;
+        line-height: 1.6;
+        font-weight: normal;
+    }
+    .Dashboard2-section .sectionbar .prizes .pH {
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .overview .image {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        background: url(../../assets/images/dashboard/overview-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 10% 8%;
+        text-align: center;
+        font-size: 5vw;
+        font-family: Monad, sans-serif;
+        color: white;
+        margin-bottom: 7%;
+    }
+    .Dashboard2-section .sectionbar .overview .image .X {
+        color: rgb(242,167,2);
+    }
+    .Dashboard2-section .sectionbar .overview .image .hackathon {
+        color: #2864F0;
+    }
+    .Dashboard2-section .sectionbar .overview .social {
+        background: white;
+        width: 100%;
+        margin: 0 0 7% 0;
+        height: auto;
+        border-radius: 5px;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 2.2vw;
+        padding: 3% 4%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .overview .social .img {
+        left: 0;
+        cursor: pointer;
+        margin-right: 6%;
+        width: 3vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .txt {
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .overview .social .go {
+        right: 0;
+        cursor: pointer;
+        margin-left: 66%;
+        width: 3vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .last {
+        margin-left: 68.5%;
+    }
+	.d_section__all {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+	.submission_section {
+		padding: 2.6%;
+		width: 42%;
+		height: 60vw;
+		background: #ffffff;
+        border-radius: 5px;
+	}
+	.sub_head {
+		display: flex;
+		border: none;
+		justify-content: space-between;
+		padding: 0% 7%;
+		background: #EAEDFE;
+		border-radius: 5px;
+		margin-bottom: 15%;
+	}
+	.sub_head__submitOne, .sub_head__submitTwo {
+		font-size: 1.4vw;
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: bold;
+	}
+	.sub_head__submitTwo {
+		color: #1071f3;
+		padding: 10px 0px;
+	}
+	.sub_head__submitOne {
+		background: #ffffff;
+		color: #1071f3;
+		padding: 10px 5px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+	}
+	.submission_team {
+		display: none;
+	}
+	.sub_section__time p {
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 1.5vw;
+	}
+	#sub_section__timeLeft {
+		font-family: 'Nunito sans', sans-serif;
+		font-style: normal;
+		font-weight: 900;
+		font-size: 3.3vw;
+		margin-bottom: 5%;
+	}
+	.sub_section__add {
+		background: #f7f7f8;
+        display: grid;
+        grid-template-columns: 50%, 50%;
+        grid-gap: 10px;
+        padding: 5%;
+        border-radius: 5px;
+        font-family: 'Nunito sans', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 1.56vw;
+    }
+    .sub_section__add div:nth-child(1) {
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: bold;
+        text-transform: uppercase;
+    }
+    .sub_section__add div:nth-child(1) img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    .sub_section__add div:nth-child(1) img:hover {
+        background-image: radial-gradient(rgb(228, 220, 220), whitesmoke, whitesmoke);
+    }
+    .sub_section__add div:nth-child(1) div {
+        font-size: 1.44vw;
+    } 
+    .sub_section__add div:nth-child(2) {
+        grid-column: 2 / 3;
+    }
+	.sub_submit{
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 1.8vw;
+		padding: 3.4%;
+		width: 100%;
+		border: none;
+        background: #1071f3;
+        border-radius: 5px;
+		color: #ffffff;
+		margin-top: 15%;
+        outline: none;
+        cursor: pointer;
+	}
+	.sub_submit:active {
+		color: #f3f3f3;
+        background: #64a7ff;
+        cursor: pointer;
+	}
+}
+@media (min-width: 1000px) {
+    .hackx-dashboard {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2vw;
+        margin: 2% 5%;
+    }
+    .Dashboard2-section {
+        width: 47%;
+        margin-left: 5%;
+        margin-right: 4%;
+    }
+    .Dashboard2-section .headbar {
+        display: block;
+        width: 100%;
+        margin: 0 0 5% 0;
+        height: 68px;
+        background: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        border-radius: 4px;
+    }
+    .desktopView {
+        display: block;
+        background: #E5E5E5;
+    }
+    .mobileView {
+        display: none;
+    }
+    .Dashboard2-section .headbar .header-btn {
+        width: auto;
+        height: 68px;
+        display: flex;
+        flex-direction: column;
+    }
+    .Dashboard2-section .headbar .header-btn button {
+        width: 100%;
+        height: 64px;
+        font-size: 1.45vw;
+        line-height: 64px; 
+        margin: 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        color: rgba(156, 99, 99, 0.4);
+    }
+    .Dashboard2-section .headbar .header-btn button:hover {
+        outline: none;
+        border: none;
+        color: #1071F3;
+    }
+    .Dashboard2-section .headbar .header-btn .border-bottom {
+        width: 100%;
+        background: #1071F3;
+        border: none;
+        height: 4px;
+        display: none;
+        border-radius: 5px;
+    }
+    .Dashboard2-section .headbar .active button {
+        color: #1071F3;
+    }
+    .Dashboard2-section .headbar .active .border-bottom {
+        display: block;
+    }
+    button {
+        margin-bottom: 5%;
+        border: none;
+        background: white;
+    }
+    .announcement, .prizes, .overview {
+        display: none;
+    }
+    .Dashboard2-section .sectionbar {
+        width: 100%; 
+        margin: 5% 0 0 0;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head {
+        width: 100%;
+        margin: 0;
+        background: white;
+        border-radius: 4px;
+        line-height: 1.6;
+        padding: 3% 5% 7% 5%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second .bold {
+        font-weight: 700;
+        font-size: 1.45vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second .spnBtn {
+        margin: 0 3%;
+        padding: 0.6% 2.2%;
+        background: #0080FB;
+        color: rgba(253, 254, 255, 0.7);
+        font-size: 1.36vw;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .first {
+        font-size: 1.42vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .third {
+        font-size: 1.35vw;
+        margin-top: 1%;
+    }
+    
+    /* COMING HEAD */
+    .Dashboard2-section .sectionbar .timeline .coming-head {
+        width: 100%;
+        margin: 0;
+        background: transparent;
+        border-radius: 4px;
+        line-height: 1.6;
+        padding: 3% 5% 7% 5%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second .bold {
+        font-weight: 700;
+        font-size: 1.45vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second .spnBtn {
+        margin: 0 3%;
+        padding: 0.6% 3.8%;
+        background: #C4C4C4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.35vw;
+        text-transform: uppercase;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .first {
+        font-size: 1.42vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .third {
+        font-size: 1.35vw;
+        margin-top: 1%;
+        margin-bottom: 3.5%;
+    }
+    .Dashboard2-section .sectionbar .announcement {
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+        border-radius: 4px;
+        background: white;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.2vw;
+        line-height: 1.6;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement .elem1 {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.3vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement a {
+        color: #2864F0;
+        text-decoration: none;
+    }
+    .Dashboard2-section .sectionbar .prizes {
+        width: 100%;
+        margin: 0;
+    }
+    .prH {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.3vw;
+        font-weight: bold;
+    }
+    .prHd {
+        background: white;
+        width: 100%;
+        margin: 0;
+        padding: 4% 8% 24% 8%;
+        border-radius: 4px;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.3vw;
+        line-height: 1.6;
+        font-weight: normal;
+    }
+    .Dashboard2-section .sectionbar .prizes .pH {
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .overview .image {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        background: url(../../assets/images/dashboard/overview-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 10% 8%;
+        text-align: center;
+        font-size: 4.8vw;
+        font-family: Monad, sans-serif;
+        color: white;
+        margin-bottom: 7%;
+    }
+    .Dashboard2-section .sectionbar .overview .image .X {
+        color: rgb(242,167,2);
+    }
+    .Dashboard2-section .sectionbar .overview .image .hackathon {
+        color: #2864F0;
+    }
+    .Dashboard2-section .sectionbar .overview .social {
+        background: white;
+        width: 100%;
+        margin: 0 0 7% 0;
+        height: auto;
+        border-radius: 5px;
+        font-family: Nuito Sans, sans-serif;
+        font-size:2.3vw;
+        padding: 3% 4%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .overview .social .img {
+        left: 0;
+        cursor: pointer;
+        margin-right: 6%;
+        width: 2.3vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .txt {
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .overview .social .go {
+        right: 0;
+        cursor: pointer;
+        margin-left: 67%;
+        width: 2.3vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .last {
+        margin-left: 70%;
+    }
+	.d_section__all {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+	.submission_section {
+		padding: 3.2%;
+		width: 40%;
+		height: 55vw;
+		background: #ffffff;
+        border-radius: 5px;
+	}
+	.sub_head {
+		display: flex;
+		border: none;
+		justify-content: space-between;
+		padding: 0% 7%;
+		background: #EAEDFE;
+		border-radius: 5px;
+		margin-bottom: 15%;
+	}
+	.sub_head__submitOne, .sub_head__submitTwo {
+		font-size: 1.2vw;
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: bold;
+	}
+	.sub_head__submitTwo {
+		color: #1071f3;
+		padding: 10px 0px;
+	}
+	.sub_head__submitOne {
+		background: #ffffff;
+		color: #1071f3;
+		padding: 10px 5px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+	}
+	.submission_team {
+		display: none;
+	}
+	.sub_section__time p {
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 1.2vw;
+	}
+	#sub_section__timeLeft {
+		font-family: 'Nunito sans', sans-serif;
+		font-style: normal;
+		font-weight: 900;
+		font-size: 2.6vw;
+		margin-bottom: 5%;
+	}
+	.sub_section__add {
+		background: #f7f7f8;
+        display: grid;
+        grid-template-columns: 50%, 50%;
+        grid-gap: 10px;
+        padding: 5%;
+        border-radius: 5px;
+        font-family: 'Nunito sans', sans-serif;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 1.48vw;
+    }
+    .sub_section__add div:nth-child(1) {
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: bold;
+        font-size: 1vw;
+        text-transform: uppercase;
+    }
+    .sub_section__add div:nth-child(1) img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    .sub_section__add div:nth-child(1) img:hover {
+        background-image: radial-gradient(rgb(228, 220, 220), whitesmoke, whitesmoke);
+    }
+    .sub_section__add div:nth-child(2) {
+        grid-column: 2 / 3;
+    }
+	.sub_submit{
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 1.2vw;
+		padding: 3%;
+		width: 100%;
+		border: none;
+        background: #1071f3;
+        border-radius: 5px;
+		color: #ffffff;
+		margin-top: 15%;
+        outline: none;
+        cursor: pointer;
+	}
+	.sub_submit:active {
+		color: #f3f3f3;
+        background: #64a7ff;
+        cursor: pointer;
+	}
+}

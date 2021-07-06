@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+html, body {
+    width: 100%;
+    margin: 0;
+    background: #E5E5E5;
+}
+* {
+    box-sizing: border-box;
+}
+button {
+    border: none;
+    outline: none;
+}
+button:hover {
+    border: none;
+    outline: none;
+}
+
+.dashboard-submitted-screen {
+    width: 100%;
+    margin: 0;
+    background: #E5E5E5;
+}
+.dashboard-submitted-screen .headBar {
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;   
+    color: #FFFFFF;
+    padding: 1% 8% 9% 8%;
+    background: #0080FB;
+    z-index: -1;
+}
+.dashboard-submitted-screen .contentBar {
+    width: 100%;
+    background: transparent;
+    margin: -9% 0 0 0;
+    padding: 5%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.dashboard-submitted-screen .contentBar .horRow {
+    background: transparent;
+    border-radius: 5px;
+    width: 66%;
+    margin-right: 4%;
+    display: flex;
+    flex-direction: column;    
+}
+.dashboard-submitted-screen .contentBar .horRow .helloBar {
+    width: 100%;
+    padding: 5%;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin-bottom: 8%;
+}
+.dashboard-submitted-screen .contentBar .horRow .helloBar .HdCnt {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 3.3%;
+}
+.dashboard-submitted-screen .contentBar .horRow .helloBar .txtCnt {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 3%;
+}
+.dashboard-submitted-screen .contentBar .horRow .helloBar .horLineCnt {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 6%;
+}
+.dashboard-submitted-screen .contentBar .mainCnt {
+    width: 100%;
+    padding: 5%;
+    background: #FFFFFF;
+    font-weight: 500;
+    border-radius: 5px;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult {
+    margin-bottom: 8%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .title {
+    font-weight: 900;
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .techList {
+    width: 100%;
+    margin: 5% 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .techList .techUsed {
+    width: auto;
+    height: 39px;
+    background: #C8F8F0;
+    padding: 1.5% 2.5%;
+    margin: 2% 2% 0 0;
+    border-radius: 5px;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .link {
+    margin: 2% 2.6%;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .attachmentImg {
+    width: 100%;
+    margin: 0;
+    padding: 1% 1.5%;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .attachmentImg .attachments {
+    width: 100%;
+    display: block;
+    margin: 1.5%;
+    height: 53px;
+    cursor: pointer;
+    background: #C4C4C4;
+    border-radius: 5px;
+    overflow-x: hidden;
+}
+.dashboard-submitted-screen .contentBar .blank {
+    width: 30%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-submitted-screen .contentBar .blank .blank1 {
+    width: 100%;
+    margin: 0;
+    background: white;
+    height: 24vw;
+    border-radius: 5px;
+    margin-bottom: 9%;
+}
+.dashboard-submitted-screen .contentBar .blank .blank2 {
+    width: 100%;
+    margin: 0;
+    background: white;
+    height: 13vw;
+    border-radius: 5px;
+}
+.dashboard-submitted-screen .editBtn {
+    width: 25%;
+    height: 70px;
+    float: left;
+    margin: 0 0 2% 5%;    
+    background: #0080FB;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
+    border: none;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+@media (max-width: 320px) {
+    .dashboard-submitted-screen .editBtn {
+        font-size: 14px;
+        width: 160px;
+    }
+}
+@media (min-width: 320px) and (max-width: 550px) {
+    .dashboard-submitted-screen .editBtn {
+        font-size: 14px;
+        width: 180px;
+    }
+}
+@media (min-width: 551px) and (max-width: 768px) {
+    .dashboard-submitted-screen .editBtn {
+        font-size: 16px;
+        width: 230px;
+    }
+}

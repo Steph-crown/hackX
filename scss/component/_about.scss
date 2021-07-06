@@ -1,0 +1,155 @@
+.about {
+  padding: 8px;
+}
+
+.about .about-container {
+  max-width: 920px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.about-text {
+  text-align: center;
+  font-family: $default-font-family;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  color: $color-secondary;
+}
+
+.about-what {
+  margin-bottom: 220px;
+}
+
+.about-what img {
+  float: left;
+  margin-right: 91px;
+}
+
+.about-what .text-content h2 {
+  font-family: $default-font-family;
+  color: $color-secondary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.about-what .text-content p {
+  font-family: $default-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.about-how img {
+  float: right;
+  margin-left: 89px;
+}
+
+.about-how .text-content h2 {
+  font-family: $default-font-family;
+  color: $color-secondary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.about-how .text-content p {
+  font-family: $default-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.about-how {
+  margin-bottom: 200px;
+}
+
+.about-criteria {
+  visibility: hidden;
+}
+
+@include breakpoint(xs) {
+  .about {
+    margin: 2px;
+  }
+
+  .about-text {
+    display: none;
+  }
+
+  .about-what::before {
+    content: "About";
+    display: block;
+    text-align: center;
+    font-size: 28.5px;
+    font-weight: 500;
+    color: $color-secondary;
+    font-family: $default-font-family;
+    margin-bottom: 27px;
+  }
+
+  .about-container .about-what img {
+    width: 100%;
+    margin-bottom: 11px;
+  }
+
+  .about-container .about-how img {
+    width: 100%;
+    margin-bottom: 11px;
+  }
+
+  .text-content {
+    max-width: 335px;
+    margin: 0 auto;
+  }
+
+  .about .about-container {
+    max-width: 360px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .about-what {
+    margin-bottom: 55px;
+  }
+
+  .about-what .text-content h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+
+  .about-how .text-content h2 {
+    margin-bottom: 8px;
+    font-size: 25px;
+  }
+
+  .about-how {
+    margin-bottom: 70px;
+  }
+
+  .about-criteria {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+  }
+
+  .about-criteria-btn {
+    visibility: initial;
+    width: 202px;
+    height: 50px;
+    font-size: 14px;
+    font-family: $default-font-family;
+    border: none;
+    background-color: $color-secondary;
+    color: $color-white;
+    border-radius: 5px;
+  }
+}

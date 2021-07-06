@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #E5E5E5;
+}
+.profile-page-section button, .profile-page-section button:hover {
+    outline: none;
+    border: none;
+}
+@media (min-width: 700px) {
+    .profile-page-section .row-three {
+        display: none;
+    }
+    .desktop-bio {
+        display: block;
+    }
+    .profile-page-section {
+        width: 86%;
+        margin: 20px 7% 8% 7%;
+    }
+    .profile-page-section .hackx-dashboard {
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-size: 24px;
+    }
+    .profile-page-section .first-flex, .profile-page-section .next-row .second-flex {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .profile-page-section .first-flex {
+        margin: 30px 0;
+    }
+    .profile-page-section .first-flex .item-one {
+        width: 48%;
+        background-color: #FFFFFF;
+        padding: 1.7% 4.5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .profile-page-section .first-flex .item-one .image-row {
+        width: 38%;
+        margin-right: 10%;
+    }
+    .profile-page-section .first-flex .item-one .image-row img {
+        width: 100%;
+        height: auto;
+    }
+    .profile-page-section .first-flex .item-one .content-row {
+        font-family: 'Montserrat', sans-serif;
+        color: #000000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        text-align: center;
+    }
+    .profile-page-section .first-flex .item-one .content-row h4 {
+        margin: 5% 0;
+    }
+    .profile-page-section .first-flex .item-one .edit-avatar {
+        padding: 8px 12px;
+        color: #FFFFFF;
+        background-color: #0080FB;
+        border-radius: 5px;
+        text-transform: uppercase;
+        margin-top: 10%;
+        font-size: 12px;
+    }
+    .profile-page-section .first-flex .item-two {
+        background-color: #FFFFFF;
+        width: 48%;
+        padding: 1.5% 2% 3% 2%;
+        border-radius: 5px;
+        font-family:' Montserrat', sans-serif;
+    }
+    .profile-page-section .first-flex .item-two .bio-text-content {
+        background-color: #E5E5E5;
+        width: 100%;
+        margin-top: 1.8%;
+        height: 120px;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: #000000;
+    }
+    .profile-page-section .flex-two-header {
+        font-family: 'Nunito Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;   
+        color: #000000;
+    }
+    .profile-page-section .next-row {
+        width: 100%;
+        margin: 30px 0;
+        background-color: #FFFFFF;
+        padding: 0 3.5%;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .profile-page-section .next-row .second-flex .item-one,
+    .profile-page-section .next-row .second-flex .item-two {
+        width: 50%;
+        margin: 2% 0 0 0;
+        padding-left: 2%;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+    }
+    .profile-page-section .next-row .second-flex .details-cnt .input {
+        background-color: #E5E5E5;
+        width: 88%;
+        border-radius: 5px;
+        height: 40px;
+        padding-left: 10px;
+        margin: 0 0 3% 0;
+        display: flex;
+        align-items: center;
+        font-family:' Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px; 
+        color: #000000;   
+    }
+    .profile-page-section .next-row .second-flex .details-cnt .input-title {
+        margin: 2% 0;
+        font-family:' Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px; 
+        color: rgba(0, 0, 0, 0.6);        
+    }
+    .profile-page-section .next-row .edit-profile {
+        padding: 10px 25px;
+        color: #FFFFFF;
+        background-color: #0080FB;
+        border-radius: 5px;
+        text-transform: uppercase;
+        margin: 1% 0 1.5% 0;
+        font-size: 12px;
+    }
+}
+@media (max-width: 699px) {
+    .profile-page-section .row-three {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .profile-page-section .mobile-bio {
+        background-color: #FFFFFF;
+        width: 100%;
+        padding: 1.5% 2% 3% 2%;
+        border-radius: 5px;
+        font-family:' Montserrat', sans-serif;
+    }
+    .profile-page-section .row-three .main-header {
+        font-family: 'Nunito Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;   
+        color: #000000;
+        margin: 15px 0;
+    }
+    .profile-page-section .row-three .mobile-bio .bio-text-content {
+        background-color: #E5E5E5;
+        width: 100%;
+        margin-top: 1.8%;
+        height: 120px;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        color: #000000;
+    }
+    .desktop-bio {
+        display: none;
+    }
+    .profile-page-section {
+        width: 88%;
+        margin: 15px 6% 8% 6%;
+    }
+    .profile-page-section .hackx-dashboard {
+        color: #000000;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-size: 20px;
+    }
+    .profile-page-section .first-flex, .profile-page-section .next-row .second-flex {
+        width: 100%;
+        padding: 0;
+    }
+    .profile-page-section .first-flex {
+        margin: 15px 0;
+    }
+    .profile-page-section .first-flex .item-one {
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 5% 4.5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+    .profile-page-section .first-flex .item-one .image-row {
+        width: 170px;
+    }
+    .profile-page-section .first-flex .item-one .image-row img {
+        width: 100%;
+        height: auto;
+    }
+    .profile-page-section .first-flex .item-one .content-row {
+        font-family: 'Montserrat', sans-serif;
+        color: #000000;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        text-align: center;
+    }
+    .profile-page-section .first-flex .item-one .content-row h4 {
+        margin: 5% 0;
+    }
+    .profile-page-section .first-flex .item-one .edit-avatar {
+        padding: 10px 17px;
+        color: #FFFFFF;
+        background-color: #0080FB;
+        border-radius: 5px;
+        text-transform: uppercase;
+        margin: 10% 0 0 0;
+        font-size: 12px;
+    }
+    .profile-page-section .flex-two-header {
+        font-family: 'Nunito Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;   
+        color: #000000;
+    }
+    .profile-page-section .next-row {
+        width: 100%;
+        margin: 12px 0 0 0;
+        background-color: #FFFFFF;
+        padding: 4% 9%;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .profile-page-section .next-row .second-flex .item-one,
+    .profile-page-section .next-row .second-flex .item-two {
+        width: 100%;
+        margin: 2% 0 0 0;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+    }
+    .profile-page-section .next-row .second-flex .details-cnt .input {
+        background-color: #E5E5E5;
+        width: 100%;
+        border-radius: 5px;
+        height: 40px;
+        padding-left: 10px;
+        margin: 0 0 3% 0;
+        display: flex;
+        align-items: center;
+        font-family:' Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px; 
+        color: #000000;   
+    }
+    .profile-page-section .next-row .second-flex .details-cnt .input-title {
+        margin: 2% 0;
+        font-family:' Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px; 
+        color: rgba(0, 0, 0, 0.6);        
+    }
+    .profile-page-section .next-row .edit-profile {
+        padding: 10px 25px;
+        color: #FFFFFF;
+        background-color: #0080FB;
+        border-radius: 5px;
+        text-transform: uppercase;
+        margin: 6% 0 0 0;
+        font-size: 12px;
+    }
+}

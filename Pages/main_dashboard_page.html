@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link href="../scss/component/Dashboard2-section.css" rel="stylesheet">
+    <link href="../scss/page/popup.css" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        div.Dashboard2-section > div.sectionbar > section.submission > div.subDashStatus > button.mobSub {
+            font-family: Poppins, sans-serif; 
+            color: white;
+            background: #1071f3; 
+            padding: 5px 15px; 
+            border-radius: 5px; 
+            margin-top: 15px;
+            opacity: .6;
+            transition: .7s ease-in-out;
+        }
+        div.Dashboard2-section > div.sectionbar > section.submission > div.subDashStatus > button.mobSub:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+  <div class="main_dashboard__pageAll">
+    <nav> 
+        <div class="head_section1">
+            <div class="head_info0">
+                <a href="#">
+                    <div class="head_pic0">
+                        <a href="../index.html"><img src="../assets/ECX.png"/></a>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-flex">
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <button class="drop-btn">
+                                <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                                Dashboard
+                            </button>
+                            <div class="dropDown-content">
+                                <a class="filter" href="#timelineHead">Timeline</a>
+                                <a id="announDropBtn" class="filter" href="#announHead">Announcements</a>
+                                <a class="filter" href="#overviewHead">Overview</a>
+                            </div> 
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="dashboard-submissions.html">   
+                                <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
+                                Submission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="i100">
+                        <div class="head_section2">
+                            <div class="head_logout">
+                                <p class="name">KEAZZY</p>
+                                <a href="profile-page.html" class="view">VIEW PROFILE</a>
+                            </div>
+                            <div class="head_pic1">
+                                <div class="head_pic2"><img src="" class="head_pic02"/></div>
+                            </div>
+                            <div class="dropdown_button">
+                                <button class="dropdownBtn">
+                                    <img src="../assets/images/dashboard/dropdown-logo.svg">
+                                    <div class="dropdownProfile" id="dropdownProfile">
+                                        <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
+                                        <hr class="ddHr">
+                                        <div class="accountState">Participant</div>
+                                        <hr class="ddHr">
+                                        <div class="navigationLink">
+                                            <a href="profile-page.html">Your Profile</a>
+                                            <a href="dashboard-submissions.html">Your submissions</a>
+                                            <a href="teams.html">Your Team</a>
+
+                                        </div>
+                                        <hr class="ddHr">
+                                        <div class="otherNavs">
+                                            <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
+                                            <!--<a>Settings</a>-->
+                                            <a id="logout_user">Logout</a>
+                                        </div>
+                                    </div>                                    
+                                </button>
+                            </div>    
+                        </div>
+                        <div class="linedivide"></div>
+                    </div>
+                </div>
+                <div class="logout-wrapper">
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div> 
+    <header class="hackx-dashboard">hackX <b>> Dashboard</b></header>
+    <div class="Dashboard2-section mobileView">
+        <header class="mobileDashLink">Dashboard > <b>home</b></header>
+        <div class="sectionbar">
+            <section class="submission">
+                <div class="blueHead">SUBMISSIONS</div>
+                <div class="substruction">Your submissions will appear here</div>
+                <hr class="mobViewHr">
+                <div class="subDashStatus">No Submissions yet<br>
+                    <button class="subDashStatus mobSub" onclick="window.location.assign('dashboard-submission-form.html')">Submit a Project</button>
+                </div>
+                <hr class="mobViewHr">
+                <div class="subDashTime">
+                    <div class="subDashTimeHd">time left to submit</div>
+                    <div class="subDashTimeTxt">0d:00h:00m</div>
+                </div>
+            </section>
+            <section class="timeline">
+                <div class="blueHead" id="timelineHead">TIMELINE</div>
+                <hr class="mobViewHr">
+                <div class="active-head">
+                    <div class="first">
+                        November 10, 2020
+                    </div>
+                    <span class="spnBtn">DONE</span>
+                    <div class="second">
+                        <span class="bold">Hackathon started</span>
+                    </div>
+                    <div class="third">
+                        the hackathon officially started
+                    </div>                    
+                </div>
+                <hr class="mobViewHr">
+                <div class="coming-head">
+                    <div class="first">
+                        December 04, 2020
+                    </div>
+                    <span class="spnBtn">12:00 PM</span>
+                    <div class="second">
+                        <span class="bold">Submission starts</span>
+                    </div>
+                    <div class="third">
+                        Submissions of project begins
+                    </div>
+                </div>
+                <hr class="mobViewHr">
+                <span class="briefo">
+                    Timeline was last updated <span id="time"></span> today at 10:00 AM.
+                </span>
+                <span class="fullView">
+                    <a href="dashboard-mobile-timeline.html">View All</a>
+                </span>
+            </section>
+            <section class="announcement">
+                <div class="blueHead" id="announHead">ANNOUNCEMENT</div>
+                <hr class="mobViewHr">
+                <!--
+                <div class="paranounce">
+                    <div class="elem1">May 19, 2020</div>
+                    <a href="#">Book your mentor session with the Biconomy team!</a><br>
+                    Hey Hackers,
+                </div>
+                -->
+                <div class="paranounce">
+                	Check Back Later...
+                </div>
+                <hr class="mobViewHr">
+                <span class="briefo">
+                    <!-- Announcement was last updated <span id="time">20 mins</span> ago -->
+                </span>
+                <span class="fullView">
+                    <a href="dashboard-mobile-announcement.html">View All</a>
+                </span>
+            </section>
+            <section class="prizes">
+                <div class="blueHead">PRIZES</div>
+                <hr class="mobViewHr">
+                <div class="prHd">
+                    <!-- <p>
+                        <div class="pH">First position:</div>
+                        First position wins a sum of One million naira (N1,000,000)
+                    </p>
+                    <p>
+                        <div class="pH">Second position:</div>
+                    </p> -->
+                    <p>
+                  	  <div class="pH">
+                    		ECX would be dedicated to supporting the winners as an open source project/tool to incubation for sponsorship from potential companies.
+                    	</div>
+                    </p>
+                </div>
+                <hr class="mobViewHr">
+                <span class="briefo">
+                    
+                </span>
+                <span class="fullView">
+                    <a href="dashboard-mobile-prizes.html">View All</a>
+                </span>
+            </section>
+            <section class="overview">
+                <div class="blueHead" id="overviewHead">OVERVIEW</div>
+                <hr class="mobViewHr">
+                <div class="image">
+                    <div class="hackX"><span style="font-family: 'Poppins', sans-serif;">hack</span><span class="X">X</span></div>
+                    <div class="hackathon">HACKATHON</div>
+                </div>
+                <hr class="mobViewHr">
+                <span class="briefo">
+                    
+                </span>
+                <span class="fullView">
+                    <a href="dashboard-mobile-overview.html">View All</a>
+                </span>
+            </section>
+        </div>
+    </div>
+    <div class="d_section__all desktopView">
+        <div class="Dashboard2-section">
+            <div class="headbar">
+                <span class="header-btn active">
+                    <button id="timelineBtn">TIMELINE</button>
+                    <span class="border-bottom" id="tl"></span>
+                </span>
+                <span class="header-btn">
+                    <button id="announBtn">ANNOUNCEMENT</button>
+                    <span class="border-bottom" id="al"></span>
+                </span>
+                <span class="header-btn">
+                    <button id="prizesBtn">PRIZES</button>
+                    <span class="border-bottom" id="pl"></span>
+                </span>
+                <span class="header-btn">
+                    <button id="overviewBtn">OVERVIEW</button>
+                    <span class="border-bottom" id="ol"></span>
+                </span>
+            </div>
+                <div class="sectionbar">
+                    <section class="timeline" id="timeline">
+                    <div class="active-head">
+                        <div class="first">
+                            November 10, 2020
+                        </div>
+                        <div class="second">
+                            <span class="bold">Hackathon started</span>
+                            <span class="spnBtn">on going</span>
+                        </div>
+                        <div class="third">
+                            The hackathon officially started
+                        </div>                    
+                    </div>
+                    <div class="coming-head">
+                        <div class="first">
+                            December 04, 2020
+                        </div>
+                        <div class="second">
+                            <span class="bold">Submission starts</span>
+                            <span class="spnBtn">12:00 PM</span>
+                        </div>
+                        <div class="third">
+                            submission of project begins
+                        </div> 
+                        <!--<div class="first">
+                            October 12, 2020
+                        </div>
+                        <div class="second">
+                            <span class="bold">Hackathon starts</span>
+                            <span class="spnBtn">coming soon</span>
+                        </div>
+                        <div class="third">
+                            submissions open and you can start submitting your projects
+                        </div> 
+                        <div class="first">
+                            October 12, 2020
+                        </div>
+                        <div class="second">
+                            <span class="bold">Hackathon starts</span>
+                            <span class="spnBtn">coming soon</span>
+                        </div>
+                        <div class="third">
+                            submissions open and you can start submitting your projects
+                        </div> 
+                        <div class="first">
+                            October 12, 2020
+                        </div>
+                        <div class="second">
+                            <span class="bold">Hackathon starts</span>
+                            <span class="spnBtn">coming soon</span>
+                        </div>
+                        <div class="third">
+                            submissions open and you can start submitting your projects
+                        </div> 
+                        <div class="first">
+                            October 12, 2020
+                        </div>
+                        <div class="second">
+                            <span class="bold">Hackathon starts</span>
+                            <span class="spnBtn">coming soon</span>
+                        </div>
+                        <div class="third">
+                            submissions open and you can start submitting your projects
+                        </div>-->   
+                    </div>
+                </section>
+                <section class="announcement" id="announcement" style="background: none">
+                	<!--
+                    <p>
+                        <div class="elem1">May 19, 2020</div>
+                        <a href="#">Book your mentor session with the Biconomy team!</a><br>
+                        Hey Hackers,
+                    </p>
+                    <p>
+                        The Biconomy team is hosting dedicated mentorship and tech support for those integrating Biconomy with their DApps at hackX, today evening. Superchanging your DApps is super easy with Biconomy, not to mention the chance to win the awesome bounties on offer!
+                    </p>
+                    <p>
+                        Bounties:<br>
+                        <a href="https://medium.com/biconomy/buildl-on-biconomy-at-the-money-legos-hackathon-eba04aca2638">https://medium.com/biconomy/buildl-on-biconomy-at-the-money-legos-hackathon-eba04aca2638</a>
+                        <br>Documentation:<br> <a href="https://docs.biconomy.io/">https://docs.biconomy.io/</a><br>
+                        Workshop:<br> <a href="https://www.youtube.com/watch?v=SmCqbLaRAJI">https://www.youtube.com/watch?v=SmCqbLaRAJI</a>
+                    </p>
+                    <p>
+                        You can book your one-on-one 15min mentorship session with the Biconomy team through the link below.
+                    </p>
+                    <p>
+                        <a href="https://calendly.com/tarungupta/biconomy-dapp-integration-discussion?month=2020-04">https://calendly.com/tarungupta/biconomy-dapp-integration-discussion?month=2020-04</a>
+                    </p>
+                    <p>
+                        Time: 6:30 - 8:00 PM 1ST 28 April
+                    </p>
+                    -->
+                    <div id="displayy_mobile">
+                    	<div class="display_txt" style="text-align: center; margin-top: 50px">
+                    		<p class="display_txt__one">Nothing to display now</p>
+                    		<p class="display_txt__two">Check back soon</p>
+                    		<img src="../assets/images/dashboard/code-shape-1-1.png" alt="NoDisplay">
+                    	</div>
+                    </div>
+                </section>
+                <section class="prizes" id="prizes">
+                    <p class="prH">PRIZES</p>
+                    <div class="prHd">
+                    <!--
+                        <p>
+                            <div class="pH">First position:</div>
+                            First position wins a sum of One million naira (N1,000,000)
+                        </p>
+                        <p>
+                            <div class="pH">Second position:</div>
+                            First position wins a sum of One million naira (N1,000,000)
+                        </p>
+                        <p>
+                            <div class="pH">Third position:</div>
+                            First position wins a sum of One million naira (N1,000,000)
+                        </p>
+                        -->
+                        <p>
+                        	<div class="pH">
+                        		ECX would be dedicated to supporting the winners as an open source project/tool to incubation for sponsorship from potential companies.<br><br>
+                        		• Monetary Prizes may as well be given out depending on sponsorship.
+                        	</div>
+                        </p>
+                    </div>
+                </section>
+                <section class="overview" id="overview">
+                    <div class="image">
+                        <div class="hackX"><span style="font-family: 'Poppins', sans-serif;">hack</span><span class="X">X</span></div>
+                        <div class="hackathon">HACKATHON</div>
+                    </div>
+                    <div class="social" title="ecxunilag" onclick="window.location.assign('https://twitter.com/ecxunilag')">
+                        <img src="../assets/images/dashboard/dash-twitter.svg" class="img">
+                        <div class="txt">Twitter</div>
+                        <img src="../assets/images/dashboard/overview-blue.svg" class="go">
+                    </div>
+                    <div class="social" title="ECX-Unilag" onclick = "window.location.assign('https://github.com/ECX-Unilag')">
+                        <img src="../assets/images/dashboard/dash-github.svg" class="img">
+                        <div class="txt">Github</div>
+                        <img src="../assets/images/dashboard/overview-gold.svg" class="go">
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="submission_section">
+            <div class="sub_head">
+                <p class="sub_head__submitOne">SUBMITTING IN TEAM</p>
+                <p class="sub_head__submitTwo">SUBMITTING IN TEAM</p>
+            </div>
+            <div class="submission_team">
+                <p class="sub_create">Create a new team or join an existing one</p><br>
+                <div class="sub_team">
+                    <p class="sub_team__name">TEAM NAME</p>
+                    <input type="text" id="name" name="name"><button class="sub_team__createTeam">Create team</button><br>
+                    <div class="sub_team__line"><span class="sub_team__or">OR</span></div><br>
+                    <p class="sub_team__code">TEAM CODE</p>
+                    <input type="text" id="code" name="code" placeholder="eg HZK5788"><button class="sub_team__joinTeam">Join team</button><br>
+                </div>
+            </div>
+            <div class="sub_section">
+                <div class="sub_section__time">
+                    <p>TIME LEFT TO SUBMIT</p>
+                    <div id="sub_section__timeLeft">time remaining</div>
+                </div>
+                <div class="sub_section__add">
+                    <div class="sub_section__addImage">
+                        <a href="dashboard-submission-form.html"><img src="../assets/images/submission-page-submit.svg"></a>
+                        <div>Add Project</div>
+                    </div>
+                    <div class="text">
+                        Begin your project submission by clicking the plus [+] button once the hackathon starts.
+                       Once started, you will be able to edit and update the project until you submit it for judging.
+                    </div>
+                </div>
+            </div>
+            <button class="sub_submit" onclick="window.location.assign('dashboard-submission-form.html')">Submit project for judging</button>
+        </div>        
+    </div>
+  </div>
+    <div class="main_dashboard__welcome" id="close-cont">
+    	<div class="welcome_close">
+    		<img src="../assets/images/Rectangle.png" id="close_image" alt="close">
+    	</div>
+    	<div class="welcome_info">
+    		<img src="../assets/images/welocmeimg.png" alt="welcome">
+    		<div class="welcome_info__flex">
+    			<p class="welcome_info__head">Welcome <span class="welcome_username">Anonymous</span>!</p>
+    			<p class="welcome_info__txt">Throughout the duration of the hackathon, you will spend
+    				your time here to submit your project, keep track of the timeline and other stuff
+    				and other things that happen here.
+    			</p>
+    		</div>
+    	</div>
+    </div>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/dashboard2-section.js"></script>
+    <script src="../js/get_user.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/popup.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+</html>

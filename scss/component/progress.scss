@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+@font-face {
+  font-family: Monad;
+  src: url(Monad.otf);
+}
+$color-blue: #1071F3;
+$color-lightBlue: #78B0FF;
+$fontMn: "Montserrat", sans-serif;
+
+html, body{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+.progress_body{
+	background-color: #ffffff;
+}
+@media screen and (min-width: 769px) {
+	.progress_section{
+		margin-top: 320px;
+		border: 1px solid #ffffff;
+		width: 30%;
+		border-radius: 5px;
+		padding: 10px;
+		padding-left: 20px;
+		float: right;
+		margin-right: 3%;
+	}
+	.progress_head{
+		font-family: $fontMn;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 16px;
+	}
+	.progress_percent{
+		font-family: $fontMn;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 36px;
+	}
+	.progress_bar{
+		display: flex;
+	}
+	.progress_bar__circleOne{
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		background: $color-blue;
+		color: #ffffff;
+  		border-radius: 75% 69% 69% 75%;
+	}
+	.progress_bar__circleTwo, .progress_bar__circleThree,
+	.progress_bar__circleFour{
+		margin-top: 5px;
+		height: 30px;
+		width: 30px;
+		background: $color-lightBlue;
+		border-radius: 75% 69% 69% 75%;
+	}
+	.progress_bar__line{
+		height: 40px;
+		width: 4px;
+		background: $color-blue;
+		margin: 0% 6%;
+		transform: rotate(90deg);
+	}
+	.progress_submit a{
+		text-decoration: none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		color: rgba(255, 255, 255, 0.5);
+		font-family: $fontMn;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 18px;
+		background-color: $color-lightBlue;
+		padding: 7px 9px;
+	}
+	.progress_submit{
+		background-color: #ffffff;
+		border: none;
+		margin-left: 13%;
+		margin-top: 10%;
+	}
+	.progress_submit a:active, .progress_submit:active{
+		color: $color-lightBlue;
+		background: none;
+	}
+}

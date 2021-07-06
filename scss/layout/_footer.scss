@@ -1,0 +1,164 @@
+footer {
+  bottom: 0;
+}
+
+.footer {
+  background-color: $color-gray;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 21px;
+  font-family: $default-font-family;
+  font-size: 14px;
+  padding: 25px 120px;
+  // margin-top: 80px;
+}
+
+.footer-top {
+  display: flex;
+}
+
+.footer .footer-top .ecxx {
+  margin-right: auto;
+}
+
+.footer-top .buttons {
+  visibility: hidden;
+}
+
+.ecxx {
+  font-family: Monoton;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 56px;
+}
+
+.register {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+.login {
+  background-color: $color-tertiary;
+  color: $color-white;
+}
+
+.footer-top .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: $color-gray-light;
+  margin-left: 15px;
+}
+
+.footer .footer-bottom {
+  display: flex;
+  margin-top: 16px;
+}
+
+.footer .footer-bottom .footer-icons {
+  margin-right: auto;
+  margin-left: -6.5px;
+}
+
+.footer-bottom .footer-icons a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  margin-top: -10px;
+}
+
+.footer-bottom .footer-icons a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+.footer-bottom .footer-copyright p {
+  display: inline-block;
+  margin-left: 65px;
+  color: $color-gray-dark;
+}
+
+.footer-bottom .footer-copyright p span {
+  margin-left: 10px;
+}
+
+@include breakpoint(lg) {
+  .footer {
+    padding: 30px 30px;
+  }
+}
+
+//mobile
+@include breakpoint(xs) {
+  .footer {
+    padding: 30px 10px 30px 10px;
+    text-align: center;
+  }
+
+  .footer-top {
+    display: initial;
+    vertical-align: middle;
+  }
+
+  .footer .footer-top .ecxx {
+    margin-bottom: 9px;
+  }
+
+  .ecx-image {
+    float: none;
+  }
+
+  .footer-top .buttons {
+    visibility: initial;
+    margin-bottom: 35px;
+  }
+
+  .footer-top .buttons a button {
+    color: rgba(255, 255, 255, 0.6);
+    margin: 10px 0;
+    text-transform: uppercase;
+    width: 120px;
+    font-size: 14px;
+    padding: 10px 18px;
+    @include border-radius(2px);
+    outline: none;
+    border: none;
+  }
+
+  .footer-top .footer-links a {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .footer .footer-bottom {
+    display: initial;
+    margin-top: 20px;
+  }
+
+  .footer .footer-bottom .footer-icons {
+    margin: -10px auto 15px 28px;
+  }
+
+  .footer-bottom .footer-icons a img {
+    display: inline-block;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    margin-top: 13px;
+  }
+
+  .footer-bottom .footer-copyright {
+    display: flex;
+  }
+
+  .footer-bottom .footer-copyright p {
+    margin: auto;
+  }
+}

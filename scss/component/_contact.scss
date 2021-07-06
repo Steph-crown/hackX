@@ -1,0 +1,450 @@
+.success,
+.error {
+    color: white;
+    width: 60%;
+    padding: 5px;
+    margin-top: 3rem;
+    margin: 2rem auto;
+}
+
+.success {
+    background: green;
+
+}
+
+.error {
+    background: #E5193B;
+}
+
+.link-to-dashboard a{
+    color: white;
+}
+@media (max-width: 500px) {
+
+    .contact-main {
+        margin: 3rem 0;
+        background: rgb(250, 249, 249);
+        padding-top: 10%;
+        height: 150%;
+    }
+
+    .contact-form {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .contact-heading {
+        margin: 5% auto;
+        text-align: center;
+        font-size: 7vw;
+        font-weight: 600;
+        color: black;
+        font-family: Poppins, sans-serif;
+    }
+
+    .contact-details {
+        margin: 2% 5%;
+        font-size: 4.7vw;
+        font-weight: 600;
+        color: black;
+        text-align: left;
+        font-family: Poppins, sans-serif;
+    }
+
+    .contact-input-text {
+        width: 90%;
+        margin: 1.5% 5%;
+        height: 45px;
+        border-radius: 4px;
+        border: none;
+        background: rgb(230, 230, 230);
+        font-size: 4vw;
+        font-family: Poppins, sans-serif;
+        color: grey;
+        vertical-align: middle;
+        padding-left: 4%;
+        outline: none;
+        transition: 1s;
+    }
+
+    .contact-input-text:hover {
+        border: 1px solid red;
+    }
+
+    .contact-textarea {
+        width: 90%;
+        margin: 1.5% 5%;
+        height: 160px;
+        overflow: hidden;
+        border-radius: 4px;
+        border: none;
+        background: rgb(230, 230, 230);
+        font-size: 4vw;
+        font-family: Poppins, sans-serif;
+        color: grey;
+        padding-top: 2.5%;
+        padding-left: 4%;
+        outline: none;
+        transition: 1s;
+    }
+
+    .contact-textarea:hover {
+        border: 1px solid red;
+    }
+
+    .contact-submit {
+        width: 40%;
+        margin: 1.5% 5%;
+        height: 45px;
+        border-radius: 5px;
+        border: none;
+        background: rgb(17, 120, 216);
+        font-size: 3 2vw;
+        font-family: Poppins, sans-serif;
+        color: white;
+        vertical-align: middle;
+        padding-left: 4%;
+        cursor: pointer;
+        outline: none;
+        opacity: .7;
+        transition: 1s;
+    }
+
+    .contact-submit:hover {
+        opacity: 1;
+    }
+
+    .link-to-dashboard {
+        width: 100%;
+        margin: 3% 0;
+        background: white;
+        padding-top: 11%;
+    }
+
+    .link-to-dashboard .span {
+        float: left;
+        margin-bottom: 5%;
+        width: 100%;
+        height: auto;
+        border: none;
+        background: transparent;
+        font-size: 12vw;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        font-family: Poppins, sans-serif;
+        outline: none;
+    }
+
+    .link-to-dashboard .button {
+        float: right;
+        width: 72%;
+        cursor: pointer;
+        height: 45px;
+        margin-right: 14%;
+        border-radius: 8px;
+        border: none;
+        background: #E5193B;
+        font-size: 4.6vw;
+        font-weight: 600;
+        color: white;
+        font-family: Poppins, sans-serif;
+        vertical-align: middle;
+        text-align: center;
+        outline: none;
+        text-transform: uppercase;
+        opacity: .7;
+        transition: 1s;
+    }
+
+    .link-to-dashboard .button:hover {
+        opacity: 1;
+        height: 47px;
+        margin-right: 13%;
+        width: 74%;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+    .contact-main {
+        background: rgb(250, 249, 249);
+    }
+
+    .contact-form {
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .contact-heading {
+        margin: 5% auto;
+        text-align: center;
+        font-size: 3vw;
+        font-weight: 600;
+        color: black;
+        font-family: Poppins, sans-serif;
+    }
+
+    .contact-details {
+        margin: 2% 5%;
+        font-size: 2vw;
+        font-weight: 600;
+        color: black;
+        text-align: left;
+        font-family: Poppins, sans-serif;
+    }
+
+    .contact-input-text {
+        width: 90%;
+        margin: 1.5% 5%;
+        height: 65px;
+        border-radius: 4px;
+        border: none;
+        background: rgb(230, 230, 230);
+        font-size: 2vw;
+        font-family: Poppins, sans-serif;
+        color: grey;
+        vertical-align: middle;
+        padding-left: 4%;
+        outline: none;
+        transition: 1s;
+    }
+
+    .contact-input-text:hover {
+        border: 1px solid red;
+    }
+
+    .contact-textarea {
+        width: 90%;
+        margin: 1.5% 5%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 4px;
+        border: none;
+        background: rgb(230, 230, 230);
+        font-size: 2vw;
+        font-family: Poppins, sans-serif;
+        color: grey;
+        padding-top: 2.5%;
+        padding-left: 4%;
+        outline: none;
+        transition: 1s;
+    }
+
+    .contact-textarea:hover {
+        border: 1px solid red;
+    }
+
+    .contact-submit {
+        width: 90%;
+        margin: 1.5% 5% 0 5%;
+        height: 65px;
+        border-radius: 5px;
+        border: none;
+        background: rgb(17, 120, 216);
+        font-size: 2vw;
+        font-family: Poppins, sans-serif;
+        color: white;
+        vertical-align: middle;
+        padding-left: 4%;
+        cursor: pointer;
+        outline: none;
+        opacity: .8;
+        transition: 1s;
+    }
+
+    .contact-submit:hover {
+        opacity: 1;
+    }
+
+    .link-to-dashboard {
+        width: 100%;
+        margin: 3% 0;
+        background: white;
+        padding: 2.4% 15%;
+    }
+
+    .link-to-dashboard .span {
+        float: left;
+        margin: 0;
+        width: 40%;
+        height: 60px;
+        border: none;
+        background: transparent;
+        font-size: 2.4vw;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        font-family: Poppins, sans-serif;
+        outline: none;
+    }
+
+    .link-to-dashboard .button {
+        width: 35%;
+        cursor: pointer;
+        height: 60px;
+        margin-right: .5%;
+        border-radius: 8px;
+        border: none;
+        background: #E5193B;
+        font-size: 1.5vw;
+        font-weight: 600;
+        color: white;
+        font-family: Poppins, sans-serif;
+        vertical-align: middle;
+        text-align: center;
+        outline: none;
+        text-transform: uppercase;
+        opacity: .8;
+        transition: 1s;
+    }
+
+    .link-to-dashboard .button:hover {
+        opacity: 1;
+        height: 63px;
+        margin-right: 0;
+        width: 36%;
+    }
+}
+
+@media (min-width: 769px) {
+    .contact-main {
+        background: rgb(250, 249, 249);
+    }
+
+    .contact-form {
+        width: 60%;
+        margin: 0 20%;
+    }
+
+    .contact-heading {
+        margin: 5% auto;
+        text-align: center;
+        font-size: 3vw;
+        font-weight: 600;
+        color: black;
+        font-family: Poppins, sans-serif;
+    }
+
+    .contact-details {
+        margin: 2% 5%;
+        font-size: 2vw;
+        font-weight: 600;
+        color: black;
+        text-align: left;
+        font-family: Poppins, sans-serif;
+    }
+
+    .contact-input-text {
+        width: 90%;
+        margin: 1.5% 5%;
+        height: 65px;
+        border-radius: 4px;
+        border: none;
+        background: rgb(230, 230, 230);
+        font-size: 2vw;
+        font-family: Poppins, sans-serif;
+        color: grey;
+        vertical-align: middle;
+        padding-left: 4%;
+        outline: none;
+        transition: 1s;
+    }
+
+    .contact-input-text:hover {
+        border: 1px solid red;
+    }
+
+    .contact-textarea {
+        width: 90%;
+        margin: 1.5% 5%;
+        height: 300px;
+        overflow: hidden;
+        border-radius: 4px;
+        border: none;
+        background: rgb(230, 230, 230);
+        font-size: 2vw;
+        font-family: Poppins, sans-serif;
+        color: grey;
+        padding-top: 2.5%;
+        padding-left: 4%;
+        outline: none;
+        transition: 1s;
+    }
+
+    .contact-textarea:hover {
+        border: 1px solid red;
+    }
+
+    .contact-submit {
+        width: 90%;
+        margin: 1.5% 5% 0 5%;
+        height: 65px;
+        border-radius: 5px;
+        border: none;
+        background: rgb(17, 120, 216);
+        font-size: 2vw;
+        font-family: Poppins, sans-serif;
+        color: white;
+        vertical-align: middle;
+        padding-left: 4%;
+        cursor: pointer;
+        outline: none;
+        opacity: .8;
+        transition: 1s;
+    }
+
+    .contact-submit:hover {
+        opacity: 1;
+    }
+
+    .link-to-dashboard {
+        width: 100%;
+        margin: 3% 0;
+        background: white;
+        padding: 2.4% 15%;
+    }
+
+    .link-to-dashboard .span {
+        float: left;
+        margin: 0;
+        width: 40%;
+        height: 60px;
+        border: none;
+        background: transparent;
+        font-size: 2.4vw;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        font-family: Poppins, sans-serif;
+        outline: none;
+    }
+
+
+    .link-to-dashboard .button {
+
+        width: 35%;
+        cursor: pointer;
+        height: 60px;
+        margin-right: .5%;
+        border-radius: 8px;
+        border: none;
+        background: #E5193B;
+        font-size: 1.5vw;
+        font-weight: 600;
+        color: white;
+        font-family: Poppins, sans-serif;
+        vertical-align: middle;
+        text-align: center;
+        outline: none;
+        text-transform: uppercase;
+        opacity: .8;
+        transition: 1s;
+    }
+
+    .link-to-dashboard .button:hover {
+        opacity: 1;
+        height: 63px;
+        margin-right: 0;
+        width: 36%;
+    }
+}
